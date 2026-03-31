@@ -1,0 +1,27 @@
+name: SBOM
+
+on:
+    push:
+        branches:
+        - main
+    pull_request:
+        branches:
+        - main
+    release:
+        types: [published]
+
+permissions: write-all
+
+jobs:
+    sbom:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+              
+            - name: Generate SBOM
+            uses: anchore/sbom-action@v0
+            with:
+                path: .
+                output-file: araneae.spdx.json
+                output-format: spdx-json
