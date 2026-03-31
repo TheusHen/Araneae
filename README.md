@@ -1,6 +1,5 @@
 <p align="center">
-  <img src="./assets/logo/White%20Mode.png" width="420" style="vertical-align: middle; margin-right: 15px;" />
-  <img src="https://i0.wp.com/opensource.org/wp-content/uploads/2022/03/osi_standard_logo_0_f6eae8bd0474088ce57799c580844a47_1000.png" width="120" style="vertical-align: middle;" />
+  <img src="./assets/logo/WhiteMode.jpg" width="460" style="vertical-align: middle; margin-right: 15px;" />
 </p>
 
 <p align="center">
