@@ -1,0 +1,949 @@
+
+(kicad_symbol_lib (version 20211014) (generator kicad_symbol_editor)
+  (symbol "KSZ9893RNXI" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+    (property "Reference" "U" (id 0) (at -25.4 46.482 0)
+      (effects (font (size 1.27 1.27)) (justify bottom left))
+    )
+    (property "Value" "KSZ9893RNXI" (id 1) (at -25.4 -48.26 0)
+      (effects (font (size 1.27 1.27)) (justify bottom left))
+    )
+    (property "Footprint" "KSZ9893RNXI:QFN40P800X800X90-65N" (id 2) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "SNAPEDA_PACKAGE_ID" "" (id 4) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "B_NOM" "0.2" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "EMAX" "" (id 6) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "D_MAX" "8.0" (id 7) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "BALL_COLUMNS" "" (id 8) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "A_MAX" "0.9" (id 9) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "BODY_DIAMETER" "" (id 10) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "THERMAL_PAD" "" (id 11) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "DMAX" "" (id 12) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Check_prices" "https://www.snapeda.com/parts/KSZ9893RNXI/Microchip+Technology/view-part/?ref=eda" (id 13) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "B_MAX" "0.25" (id 14) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Description" "\n                        \n                            Ethernet Switch IEEE 802.3, 10/100/1000 Base-TX PHY I2C, MII, RMII, SPI Interface 64-VQFN (8x8)\n                        \n" (id 15) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "EMIN" "" (id 16) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "JEDEC" "" (id 17) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Price" "None" (id 18) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "ENOM" "0.4" (id 19) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "D_NOM" "8.0" (id 20) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "VACANCIES" "" (id 21) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "L_MAX" "0.45" (id 22) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "PACKAGE_TYPE" "" (id 23) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Package" "VFQFN-64 Microchip" (id 24) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "E2_NOM" "6.5" (id 25) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "D2_NOM" "6.5" (id 26) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "PARTREV" "C" (id 27) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "DNOM" "" (id 28) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "SnapEDA_Link" "https://www.snapeda.com/parts/KSZ9893RNXI/Microchip+Technology/view-part/?ref=snap" (id 29) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "DMIN" "" (id 30) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "E_NOM" "8.0" (id 31) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "BALL_ROWS" "" (id 32) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "B_MIN" "0.15" (id 33) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "STANDARD" "IPC 7351B" (id 34) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "L_NOM" "0.4" (id 35) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MANUFACTURER" "Microchip" (id 36) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "IPC" "" (id 37) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "PIN_COLUMNS" "" (id 38) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MF" "Microchip" (id 39) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MAXIMUM_PACKAGE_HEIGHT" "0.9mm" (id 40) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "PIN_COUNT_E" "16.0" (id 41) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "PIN_COUNT_D" "16.0" (id 42) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "E_MIN" "8.0" (id 43) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "D_MIN" "8.0" (id 44) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MP" "KSZ9893RNXI" (id 45) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "PINS" "" (id 46) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "L_MIN" "0.35" (id 47) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "Availability" "In Stock" (id 48) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "E_MAX" "8.0" (id 49) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (symbol "KSZ9893RNXI_0_0"
+      (rectangle (start -25.4 -45.72) (end 25.4 45.72)
+        (stroke (width 0.1524)) (fill (type background))
+      )
+      (pin bidirectional line (at -30.48 -22.86 0) (length 5.08)
+        (name "TXRX1P_B"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "1"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 -25.4 0) (length 5.08)
+        (name "TXRX1M_B"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "2"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 -27.94 0) (length 5.08)
+        (name "TXRX1P_C"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "3"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 -30.48 0) (length 5.08)
+        (name "TXRX1M_C"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "4"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 43.18 180.0) (length 5.08)
+        (name "AVDDL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "5"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 43.18 180.0) (length 5.08) hide
+        (name "AVDDL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "11"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 43.18 180.0) (length 5.08) hide
+        (name "AVDDL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "16"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 43.18 180.0) (length 5.08) hide
+        (name "AVDDL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "56"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 43.18 180.0) (length 5.08) hide
+        (name "AVDDL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "64"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 -33.02 0) (length 5.08)
+        (name "TXRX1P_D"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "6"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 -35.56 0) (length 5.08)
+        (name "TXRX1M_D"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "7"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 40.64 180.0) (length 5.08)
+        (name "AVDDH"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "8"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 40.64 180.0) (length 5.08) hide
+        (name "AVDDH"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "19"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 40.64 180.0) (length 5.08) hide
+        (name "AVDDH"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "61"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 -17.78 180.0) (length 5.08)
+        (name "TXRX2P_A"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "9"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 -20.32 180.0) (length 5.08)
+        (name "TXRX2M_A"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "10"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 -22.86 180.0) (length 5.08)
+        (name "TXRX2P_B"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "12"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 -25.4 180.0) (length 5.08)
+        (name "TXRX2M_B"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "13"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 -27.94 180.0) (length 5.08)
+        (name "TXRX2P_C"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "14"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 -30.48 180.0) (length 5.08)
+        (name "TXRX2M_C"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "15"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 -33.02 180.0) (length 5.08)
+        (name "TXRX2P_D"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "17"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 -35.56 180.0) (length 5.08)
+        (name "TXRX2M_D"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "18"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 38.1 180.0) (length 5.08)
+        (name "DVDDL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "20"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 38.1 180.0) (length 5.08) hide
+        (name "DVDDL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "34"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 38.1 180.0) (length 5.08) hide
+        (name "DVDDL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "37"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 38.1 180.0) (length 5.08) hide
+        (name "DVDDL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "41"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 38.1 180.0) (length 5.08) hide
+        (name "DVDDL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "51"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 38.1 180.0) (length 5.08) hide
+        (name "DVDDL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "55"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 -7.62 0) (length 5.08)
+        (name "RXD3"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "21"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 -5.08 0) (length 5.08)
+        (name "RXD2"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "22"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 -2.54 0) (length 5.08)
+        (name "RXD1"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "23"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 0.0 0) (length 5.08)
+        (name "RXD0"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "24"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional clock (at -30.48 -10.16 0) (length 5.08)
+        (name "RX_CLK/REFCLKO"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "25"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 35.56 180.0) (length 5.08)
+        (name "VDDIO"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "26"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 35.56 180.0) (length 5.08) hide
+        (name "VDDIO"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "38"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 35.56 180.0) (length 5.08) hide
+        (name "VDDIO"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "54"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 2.54 0) (length 5.08)
+        (name "RX_DV/CRS_DV/RX_CTL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "27"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 -12.7 0) (length 5.08)
+        (name "RX_ER"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "28"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 -7.62 180.0) (length 5.08)
+        (name "TXD3"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "29"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 -5.08 180.0) (length 5.08)
+        (name "TXD2"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "30"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 -2.54 180.0) (length 5.08)
+        (name "TXD1"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "31"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 0.0 180.0) (length 5.08)
+        (name "TXD0"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "32"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional clock (at 30.48 -10.16 180.0) (length 5.08)
+        (name "TX_CLK/REFCLKI"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "33"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 2.54 180.0) (length 5.08)
+        (name "TX_EN/TX_CTL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "35"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 -12.7 180.0) (length 5.08)
+        (name "TX_ER"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "36"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin output line (at 30.48 17.78 180.0) (length 5.08)
+        (name "LED2_0"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "42"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin output line (at 30.48 15.24 180.0) (length 5.08)
+        (name "LED2_1"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "43"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin output line (at 30.48 27.94 180.0) (length 5.08)
+        (name "~{PME_N}"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "44"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin output line (at 30.48 30.48 180.0) (length 5.08)
+        (name "~{INTRP_N}"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "45"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin input line (at -30.48 30.48 0) (length 5.08)
+        (name "~{RESET_N}"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "46"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin output line (at -30.48 15.24 0) (length 5.08)
+        (name "SDO"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "47"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 17.78 0) (length 5.08)
+        (name "SDI/SDA/MDIO"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "48"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin input line (at -30.48 22.86 0) (length 5.08)
+        (name "~{SCS_N}"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "49"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin input clock (at -30.48 20.32 0) (length 5.08)
+        (name "SCL/MDC"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "50"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin output line (at 30.48 22.86 180.0) (length 5.08)
+        (name "LED1_0"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "52"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin output line (at 30.48 20.32 180.0) (length 5.08)
+        (name "LED1_1"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "53"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin output clock (at -30.48 7.62 0) (length 5.08)
+        (name "XO"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "57"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin input clock (at -30.48 10.16 0) (length 5.08)
+        (name "XI"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "58"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -40.64 180.0) (length 5.08)
+        (name "GND"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "59"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin input line (at -30.48 27.94 0) (length 5.08)
+        (name "ISET"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "60"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 -17.78 0) (length 5.08)
+        (name "TXRX1P_A"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "62"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -30.48 -20.32 0) (length 5.08)
+        (name "TXRX1M_A"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "63"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08)
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_1"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_2"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_3"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_4"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_5"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_6"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_7"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_8"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_9"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_10"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_11"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_12"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_13"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_14"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_15"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_16"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_17"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_18"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_19"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_20"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_21"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_22"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_23"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_24"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_25"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_26"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_27"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_28"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_29"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_30"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_31"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_32"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_33"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_34"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_35"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin power_in line (at 30.48 -43.18 180.0) (length 5.08) hide
+        (name "EXP"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "65_36"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+    )
+  )
+)

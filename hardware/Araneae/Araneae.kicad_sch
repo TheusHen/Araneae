@@ -1,0 +1,964 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "85de7642-e794-401c-85be-fb38a853ef19")
+	(paper "A2")
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 30.48 -142.24) (xy 31.75 -143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0de8731b-c9e3-45e7-81ed-6c4a24402e60")
+	)
+	(wire
+		(pts
+			(xy 29.21 -142.24) (xy 30.48 -142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d61ee0b-8900-4790-89c3-ac364f68ca59")
+	)
+	(sheet
+		(at -113.665 428.625)
+		(size 123.825 93.98)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2232ace5-0f60-4212-ba97-f6cfce1147a0")
+		(property "Sheetname" "SSD Support and Security"
+			(at -113.665 427.9134 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ssd_support.kicad_sch"
+			(at -113.665 523.1896 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
+		(at -271.145 354.33)
+		(size 139.7 70.485)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06")
+		(property "Sheetname" "System Supervision"
+			(at -271.145 353.6184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "supervision.kicad_sch"
+			(at -271.145 425.3996 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "13")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 29.21 102.235)
+		(size 26.035 11.43)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "34ab2480-dfda-4ac1-a363-e58daea69ce8")
+		(property "Sheetname" "USB-C"
+			(at 29.21 101.5234 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "usbc.kicad_sch"
+			(at 29.21 114.2496 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "USBC_D-" bidirectional
+			(at 29.21 106.68 180)
+			(uuid "16519915-c8c3-48cc-83ff-77154d83af2e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBC_D+" bidirectional
+			(at 29.21 104.14 180)
+			(uuid "92758ed1-6e86-4105-86fe-9d3d5ec1a03a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBC_FAULT_N" output
+			(at 29.21 111.76 180)
+			(uuid "65d08ff9-63d7-462f-b2d6-21b475006adf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBC_PWR_EN" input
+			(at 29.21 109.22 180)
+			(uuid "ec972a2e-f6aa-469d-b48b-01525c10a3f3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 746.125 -154.305)
+		(size 85.725 139.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "5568631e-a1e4-48da-827b-8fb2373c5ef9")
+		(property "Sheetname" "Display Conn"
+			(at 746.125 -155.0166 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "disp.kicad_sch"
+			(at 746.125 -14.0204 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 20.955 -229.235)
+		(size 169.545 76.835)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "5a732c04-a495-4fc5-ac4d-5f9817d613d4")
+		(property "Sheetname" "RJ-45"
+			(at 20.955 -229.9466 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "rj45.kicad_sch"
+			(at 20.955 -151.8154 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "15")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 407.67 -148.59)
+		(size 231.14 65.405)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "7aa82da5-053c-40c8-9162-cf7324b612e8")
+		(property "Sheetname" "Ethernet Boost"
+			(at 407.67 -149.3016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "eth.kicad_sch"
+			(at 407.67 -82.6004 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 430.53 -233.68)
+		(size 205.105 75.565)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "7fca3fb7-710d-41ad-89cb-3f5202387618")
+		(property "Sheetname" "Headers"
+			(at 430.53 -234.3916 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "headers.kicad_sch"
+			(at 430.53 -157.5304 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Field2" ""
+			(at 430.53 -233.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 28.575 20.32)
+		(size 42.545 67.31)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ae103a1e-7f53-427b-b4cd-27c268e3726b")
+		(property "Sheetname" "USB Hub"
+			(at 28.575 19.6084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "hub.kicad_sch"
+			(at 28.575 88.2146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CM4_USB_D+" bidirectional
+			(at 28.575 81.915 180)
+			(uuid "aa3b87e2-a8b5-43c3-b265-ad82d1b2d329")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBA1_D+" bidirectional
+			(at 71.12 22.86 0)
+			(uuid "dc2b3b8f-395d-430c-9673-141f518076bc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USBA1_PWR_EN" input
+			(at 28.575 27.305 180)
+			(uuid "11c72108-9810-4acc-bfc4-d6a553e618ac")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBA2_D+" bidirectional
+			(at 28.575 31.75 180)
+			(uuid "1396ddbb-247c-4646-85b4-50b465929294")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBA3_PWR_EN" input
+			(at 28.575 46.99 180)
+			(uuid "d7a2a7ef-a96d-4137-9a25-c3e69875bc1e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBA2_D-" bidirectional
+			(at 28.575 34.29 180)
+			(uuid "63f99497-9c69-41be-ab6c-b9221d68c1f9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBA2_PWR_EN" input
+			(at 28.575 36.83 180)
+			(uuid "d944b06f-bb9a-44f5-acfd-d70c50ab3dcf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USB_HUB_RESET_N" input
+			(at 28.575 79.375 180)
+			(uuid "d9b91613-3f9e-4104-b587-fdefda89ea36")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBC_D+" bidirectional
+			(at 28.575 52.07 180)
+			(uuid "a5d40586-66cb-4404-93cd-fb98aa9e9107")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBC_FAULT_N" output
+			(at 28.575 59.69 180)
+			(uuid "dd0e0673-f96d-4e81-b2cd-7b85e202f59e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBA1_D-" bidirectional
+			(at 71.12 25.4 0)
+			(uuid "747a2dbe-ea82-4558-907e-142517da0521")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USBC_D-" bidirectional
+			(at 28.575 54.61 180)
+			(uuid "c1f48577-1229-44da-9768-b49dda805e0e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBA2_FAULT_N" output
+			(at 28.575 39.37 180)
+			(uuid "75055afc-0323-4329-beb4-d01580e88f94")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBA1_FAULT_N" output
+			(at 28.575 29.21 180)
+			(uuid "4dafdc74-d30b-402b-9b8f-1ea1b0295dbf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CM4_USB_D-" bidirectional
+			(at 28.575 84.455 180)
+			(uuid "659afd94-1b6b-4e94-9f9e-15cfa48dfc36")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBA3_D-" bidirectional
+			(at 28.575 44.45 180)
+			(uuid "6eb6667c-1e98-42b7-a179-ab4b075513b8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBC_PWR_EN" input
+			(at 28.575 57.15 180)
+			(uuid "643ad303-0f3a-4511-83dd-7deeae607fe1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBA3_FAULT_N" output
+			(at 28.575 49.53 180)
+			(uuid "7461d19d-a30b-4fd6-8352-296176df3ee4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USBA3_D+" bidirectional
+			(at 28.575 41.91 180)
+			(uuid "215a23b8-03f2-4313-a173-c9ee873fe343")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "16")
+				)
+			)
+		)
+	)
+	(sheet
+		(at -38.735 -142.875)
+		(size 132.08 66.04)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b2b912e7-5dce-4440-a25e-c7360411f32c")
+		(property "Sheetname" "Micro SD"
+			(at -38.735 -143.5866 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sdcard.kicad_sch"
+			(at -38.735 -76.2504 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "14")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 334.645 -149.86)
+		(size 62.865 66.04)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b4cf24cd-404d-4415-a551-621a3a68c592")
+		(property "Sheetname" "Power"
+			(at 334.645 -150.5716 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 334.645 -83.2354 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at -38.1 -232.41)
+		(size 36.83 81.28)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b5c503f2-6b01-4670-bbe3-920589662a87")
+		(property "Sheetname" "UPS Subsystem"
+			(at -38.1 -233.1216 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ups.kicad_sch"
+			(at -38.1 -150.5454 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 231.14 -149.225)
+		(size 95.25 66.04)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b64f1d49-24e9-4567-b564-b9518d72e054")
+		(property "Sheetname" "HDMI"
+			(at 231.14 -149.9366 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "hdmi.kicad_sch"
+			(at 231.14 -82.6004 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 252.73 144.78)
+		(size 86.36 113.665)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c2599c23-b7c8-43c5-849c-93785fc5d88c")
+		(property "Sheetname" "CM4"
+			(at 252.73 144.0684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cm4.kicad_sch"
+			(at 252.73 259.0296 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 161.29 19.685)
+		(size 98.425 91.44)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c37d9352-daf4-4f0f-b41c-b1e2ed8bcf0b")
+		(property "Sheetname" "USB-A"
+			(at 161.29 18.9734 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "usba.kicad_sch"
+			(at 161.29 111.7096 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 331.47 -234.95)
+		(size 90.17 76.2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "fa758634-3022-4f98-bd9b-838d97b3650f")
+		(property "Sheetname" "SSD PCle"
+			(at 331.47 -235.6616 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ssd.kicad_sch"
+			(at 331.47 -158.1654 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
