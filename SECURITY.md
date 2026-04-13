@@ -15,8 +15,15 @@ When semantic releases exist, this section will be updated with a supported-vers
 
 **Do not open a public issue** to disclose active exploits, proof-of-concept code, or details that would enable immediate abuse in production.
 
-1. Use **GitHub Security Advisories** (Security → Report a vulnerability) if enabled on the repository, **or**
-2. Email or use a private channel agreed with the maintainers (see repository or organization contacts).
+Preferred private reporting channel:
+
+- [GitHub Security Advisory draft for Araneae](https://github.com/TheusHen/Araneae/security/advisories/new)
+
+If the advisory flow is unavailable in your account context, request a private follow-up channel through the maintainer profile:
+
+- [Repository owner contact entry point](https://github.com/TheusHen)
+
+When opening the report, use the advisory flow first whenever possible instead of a public issue.
 
 When possible, include:
 

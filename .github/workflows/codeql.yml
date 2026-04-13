@@ -10,26 +10,68 @@ on:
   workflow_dispatch:
 
 permissions:
-  actions: read
   contents: read
-  security-events: write
 
 jobs:
+  detect-languages:
+    name: Detect CodeQL targets
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      has-languages: ${{ steps.targets.outputs.has-languages }}
+      matrix: ${{ steps.targets.outputs.matrix }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          persist-credentials: false
+
+      - name: Detect supported languages
+        id: targets
+        shell: bash
+        run: |
+          languages=()
+
+          if git ls-files -- 'CMakeLists.txt' 'Makefile' '*.c' '*.cc' '*.cpp' '*.cxx' '*.h' '*.hh' '*.hpp' | grep -q .; then
+            languages+=('"c-cpp"')
+          fi
+
+          if git ls-files -- 'Cargo.toml' '*.rs' | grep -q .; then
+            languages+=('"rust"')
+          fi
+
+          if [ "${#languages[@]}" -eq 0 ]; then
+            echo "has-languages=false" >> "$GITHUB_OUTPUT"
+            echo 'matrix={"language":[]}' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          printf 'matrix={"language":[%s]}\n' "$(IFS=,; echo "${languages[*]}")" >> "$GITHUB_OUTPUT"
+          echo "has-languages=true" >> "$GITHUB_OUTPUT"
+
   analyze:
     name: Analyze (${{ matrix.language }})
+    needs: detect-languages
+    if: needs.detect-languages.outputs.has-languages == 'true'
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
 
     strategy:
       fail-fast: false
-      matrix:
-        language: ["c-cpp", "rust"]
+      matrix: ${{ fromJson(needs.detect-languages.outputs.matrix) }}
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          persist-credentials: false
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v4
+        uses: github/codeql-action/init@d4b3ca9fa7f69d38bfcd667bdc45bc373d16277e # v4
         with:
           languages: ${{ matrix.language }}
           queries: security-extended,security-and-quality
@@ -49,7 +91,7 @@ jobs:
 
       - name: Install Rust toolchain
         if: matrix.language == 'rust'
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8 # stable
 
       - name: Build C/C++
         if: matrix.language == 'c-cpp'
@@ -70,6 +112,17 @@ jobs:
           cargo build --workspace --all-targets --release
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v4
+        uses: github/codeql-action/analyze@d4b3ca9fa7f69d38bfcd667bdc45bc373d16277e # v4
         with:
           category: "/language:${{ matrix.language }}"
+
+  no-supported-languages:
+    name: CodeQL not required
+    needs: detect-languages
+    if: needs.detect-languages.outputs.has-languages != 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Explain skip
+        run: echo "No C/C++ or Rust sources were detected. Skipping CodeQL analysis."
