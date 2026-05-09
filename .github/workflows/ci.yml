@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       KICAD_IMAGE: ghcr.io/inti-cmnb/kicad10_auto:latest
+      PCB_SVG_LAYERS: F.Cu,In1.Cu,In2.Cu,In3.Cu,In4.Cu,B.Cu,F.Paste,B.Paste,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts
 
     steps:
       - uses: actions/checkout@v4
@@ -91,6 +92,8 @@ jobs:
               -v "$PWD:/workspace" \
               "$KICAD_IMAGE" \
               kicad-cli pcb export svg "/workspace/$pcb" \
+                --layers "$PCB_SVG_LAYERS" \
+                --mode-multi \
                 --output "/workspace/output/plots/$base/svg"
           done
 
