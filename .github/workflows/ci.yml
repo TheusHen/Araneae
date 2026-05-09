@@ -101,7 +101,7 @@ jobs:
                 "/workspace/$pcb"
           done
 
-      - name: Generate fabrication files for all boards with KiBot
+      - name: Generate fabrication files with KiCad CLI
         run: |
           mkdir -p output/fabrication
 
@@ -119,15 +119,41 @@ jobs:
             echo "Processing $project"
 
             mkdir -p "output/fabrication/$base"
+            mkdir -p "output/fabrication/$base/gerbers"
+            mkdir -p "output/fabrication/$base/drill"
 
             docker run --rm \
               -v "$PWD:/workspace" \
               "$KICAD_IMAGE" \
-              kibot \
-                -c "/workspace/hardware/kibot.yaml" \
-                -e "/workspace/$sch" \
-                -b "/workspace/$pcb" \
-                -d "/workspace/output/fabrication/$base"
+              kicad-cli pcb export gerbers \
+                --output "/workspace/output/fabrication/$base/gerbers" \
+                --layers "$PCB_PLOT_LAYERS" \
+                "/workspace/$pcb"
+
+            docker run --rm \
+              -v "$PWD:/workspace" \
+              "$KICAD_IMAGE" \
+              kicad-cli pcb export drill \
+                --output "/workspace/output/fabrication/$base/drill" \
+                --format excellon \
+                "/workspace/$pcb"
+
+            docker run --rm \
+              -v "$PWD:/workspace" \
+              "$KICAD_IMAGE" \
+              kicad-cli pcb export pos \
+                --format csv \
+                --units mm \
+                --side both \
+                --output "/workspace/output/fabrication/$base/${base}-position.csv" \
+                "/workspace/$pcb"
+
+            docker run --rm \
+              -v "$PWD:/workspace" \
+              "$KICAD_IMAGE" \
+              kicad-cli sch export bom \
+                --output "/workspace/output/fabrication/$base/${base}-bom.csv" \
+                "/workspace/$sch"
           done
 
       - name: Zip fabrication packages
