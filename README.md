@@ -1,14 +1,20 @@
-<p align="center">
-    <span style="font-size: 64px; font-weight: bold; position: relative; top: 10px;">
-    Araneae
-  </span>
-  <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Open-source-hardware-logo.svg/960px-Open-source-hardware-logo.svg.png"
-    width="80"
-    align="center"
-  />
-  <img width="12" />
-</p>
+<table align="center">
+<tr>
+<td>
+
+<h1>Araneae</h1>
+
+</td>
+<td>
+
+<img 
+  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Open-source-hardware-logo.svg/960px-Open-source-hardware-logo.svg.png"
+  width="90"
+/>
+
+</td>
+</tr>
+</table>
 
 <h3 align="center">
 Your network should answer to you, not report on you.

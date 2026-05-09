@@ -7,62 +7,89 @@ on:
 jobs:
   hardware-checks:
     runs-on: ubuntu-latest
+    env:
+      KICAD_IMAGE: ghcr.io/inti-cmnb/kicad10_auto:latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run KiCad ERC on all schematics
+      - name: Run KiCad ERC on project schematics
         run: |
           mkdir -p reports/erc
 
-          find hardware/Araneae -name "*.kicad_sch" | while read file; do
-            echo "Running ERC for $file"
+          find hardware -name "*.kicad_pro" | while read project; do
+            dir=$(dirname "$project")
+            base=$(basename "$project" .kicad_pro)
+            sch="$dir/$base.kicad_sch"
 
-            base=$(basename "$file" .kicad_sch)
+            if [ ! -f "$sch" ]; then
+              echo "No top-level schematic found for $project, skipping"
+              continue
+            fi
+
+            echo "Running ERC for $sch"
+
+            report_base=$(basename "$sch" .kicad_sch)
 
             docker run --rm \
               -v "$PWD:/workspace" \
-              ghcr.io/inti-cmnb/kicad8_auto:latest \
-              kicad-cli sch erc "/workspace/$file" \
-                --output "/workspace/reports/erc/${base}.rpt"
+              "$KICAD_IMAGE" \
+              kicad-cli sch erc "/workspace/$sch" \
+                --output "/workspace/reports/erc/${report_base}.rpt"
           done
 
-      - name: Run KiCad DRC on all PCBs
+      - name: Run KiCad DRC on project PCBs
         run: |
           mkdir -p reports/drc
 
-          find hardware/Araneae -name "*.kicad_pcb" | while read file; do
-            echo "Running DRC for $file"
+          find hardware -name "*.kicad_pro" | while read project; do
+            dir=$(dirname "$project")
+            base=$(basename "$project" .kicad_pro)
+            pcb="$dir/$base.kicad_pcb"
 
-            base=$(basename "$file" .kicad_pcb)
+            if [ ! -f "$pcb" ]; then
+              echo "No PCB found for $project, skipping"
+              continue
+            fi
+
+            echo "Running DRC for $pcb"
+
+            report_base=$(basename "$pcb" .kicad_pcb)
 
             docker run --rm \
               -v "$PWD:/workspace" \
-              ghcr.io/inti-cmnb/kicad8_auto:latest \
-              kicad-cli pcb drc "/workspace/$file" \
-                --output "/workspace/reports/drc/${base}.rpt"
+              "$KICAD_IMAGE" \
+              kicad-cli pcb drc "/workspace/$pcb" \
+                --output "/workspace/reports/drc/${report_base}.rpt"
           done
 
-      - name: Generate KiCad plots for all PCBs
+      - name: Generate KiCad plots for project PCBs
         run: |
           mkdir -p output/plots
 
-          find hardware/Araneae -name "*.kicad_pcb" | while read pcb; do
-            echo "Generating plots for $pcb"
+          find hardware -name "*.kicad_pro" | while read project; do
+            dir=$(dirname "$project")
+            base=$(basename "$project" .kicad_pro)
+            pcb="$dir/$base.kicad_pcb"
 
-            base=$(basename "$pcb" .kicad_pcb)
+            if [ ! -f "$pcb" ]; then
+              echo "No PCB found for $project, skipping"
+              continue
+            fi
+
+            echo "Generating plots for $pcb"
 
             mkdir -p "output/plots/$base"
 
             docker run --rm \
               -v "$PWD:/workspace" \
-              ghcr.io/inti-cmnb/kicad8_auto:latest \
+              "$KICAD_IMAGE" \
               kicad-cli pcb export pdf "/workspace/$pcb" \
                 --output "/workspace/output/plots/$base/${base}-pcb.pdf"
 
             docker run --rm \
               -v "$PWD:/workspace" \
-              ghcr.io/inti-cmnb/kicad8_auto:latest \
+              "$KICAD_IMAGE" \
               kicad-cli pcb export svg "/workspace/$pcb" \
                 --output "/workspace/output/plots/$base/svg"
           done
@@ -71,24 +98,24 @@ jobs:
         run: |
           mkdir -p output/fabrication
 
-          find hardware/Araneae -name "*.kicad_pcb" | while read pcb; do
-            echo "Processing $pcb"
-
-            dir=$(dirname "$pcb")
-            base=$(basename "$pcb" .kicad_pcb)
-
+          find hardware -name "*.kicad_pro" | while read project; do
+            dir=$(dirname "$project")
+            base=$(basename "$project" .kicad_pro)
             sch="$dir/$base.kicad_sch"
+            pcb="$dir/$base.kicad_pcb"
 
-            if [ ! -f "$sch" ]; then
-              echo "No schematic found for $base, skipping"
+            if [ ! -f "$sch" ] || [ ! -f "$pcb" ]; then
+              echo "Project files missing for $project, skipping"
               continue
             fi
+
+            echo "Processing $project"
 
             mkdir -p "output/fabrication/$base"
 
             docker run --rm \
               -v "$PWD:/workspace" \
-              ghcr.io/inti-cmnb/kicad8_auto:latest \
+              "$KICAD_IMAGE" \
               kibot \
                 -c "/workspace/hardware/kibot.yaml" \
                 -e "/workspace/$sch" \
