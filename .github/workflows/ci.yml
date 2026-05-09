@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       KICAD_IMAGE: ghcr.io/inti-cmnb/kicad10_auto:latest
-      PCB_SVG_LAYERS: F.Cu,In1.Cu,In2.Cu,In3.Cu,In4.Cu,B.Cu,F.Paste,B.Paste,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts
+      PCB_PLOT_LAYERS: F.Cu,In1.Cu,In2.Cu,In3.Cu,In4.Cu,B.Cu,F.Paste,B.Paste,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts
 
     steps:
       - uses: actions/checkout@v4
@@ -85,16 +85,20 @@ jobs:
             docker run --rm \
               -v "$PWD:/workspace" \
               "$KICAD_IMAGE" \
-              kicad-cli pcb export pdf "/workspace/$pcb" \
-                --output "/workspace/output/plots/$base/${base}-pcb.pdf"
+              kicad-cli pcb export pdf \
+                --layers "$PCB_PLOT_LAYERS" \
+                --mode-single \
+                --output "/workspace/output/plots/$base/${base}-pcb.pdf" \
+                "/workspace/$pcb"
 
             docker run --rm \
               -v "$PWD:/workspace" \
               "$KICAD_IMAGE" \
-              kicad-cli pcb export svg "/workspace/$pcb" \
-                --layers "$PCB_SVG_LAYERS" \
+              kicad-cli pcb export svg \
+                --layers "$PCB_PLOT_LAYERS" \
                 --mode-multi \
-                --output "/workspace/output/plots/$base/svg"
+                --output "/workspace/output/plots/$base/svg" \
+                "/workspace/$pcb"
           done
 
       - name: Generate fabrication files for all boards with KiBot
