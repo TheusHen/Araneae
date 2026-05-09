@@ -4,6 +4,15 @@
 	(generator_version "10.0")
 	(uuid "a09547a4-e256-465d-9f1c-fdd855c07b8f")
 	(paper "A4")
+	(title_block
+		(title "Araneae")
+		(date "2026-05-02")
+		(rev "0.1")
+		(company "Matheus Henrique(Aka: TheusHen)")
+		(comment 1 "dev@theushen.works")
+		(comment 3 "z2mCL9YdujNw7uhfDBhsiKtEFSAYvfbvY")
+		(comment 4 "Donate(Monero): 8A8gezqQ4tuVAPWAYUKB7rB5NRLFWE3RsXWFQLKh3jVAceb9pG4VjA8ApUd8DM")
+	)
 	(lib_symbols
 		(symbol "Device:C"
 			(pin_numbers
@@ -1363,7 +1372,7 @@
 				(pin power_in line
 					(at 17.78 10.16 180)
 					(length 5.08)
-					(name "V+"
+					(name "V_P"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -2166,10 +2175,10 @@
 		(uuid "053ee060-d200-44a2-b349-af2d785d3633")
 	)
 	(junction
-		(at 157.48 74.93)
+		(at 158.75 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "06dc4ca8-3623-490b-bd00-984e0a35a741")
+		(uuid "0fd78f20-f0b9-42e8-bcc2-4426569d81c4")
 	)
 	(junction
 		(at 205.74 121.92)
@@ -2184,28 +2193,28 @@
 		(uuid "37045608-ff64-4d56-98b5-aa45bacd1c4f")
 	)
 	(junction
+		(at 158.75 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4ac8a06a-73e0-4bcc-82d9-e471f317c2dd")
+	)
+	(junction
+		(at 157.48 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "621c6b7f-0fa5-4404-9cd8-393b4f2b2571")
+	)
+	(junction
 		(at 81.28 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "63659ce3-16c6-4e37-98a5-63277d882e2b")
 	)
 	(junction
-		(at 158.75 111.76)
+		(at 161.29 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "64bf89c5-8f28-463e-bc67-b625e7348405")
-	)
-	(junction
-		(at 158.75 109.22)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7b3b536a-846c-4db9-8a69-cabf120ad397")
-	)
-	(junction
-		(at 157.48 72.39)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9aa708a2-2c3d-40be-ad5b-7b7f9bb1c2b6")
+		(uuid "708a2903-8766-499e-98ce-ec61bea37a60")
 	)
 	(junction
 		(at 121.92 130.81)
@@ -2214,10 +2223,34 @@
 		(uuid "b94b2ad9-871d-44c6-a3a1-e03504a9b1ed")
 	)
 	(junction
+		(at 161.29 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bd984120-7c4a-4541-8944-75e0ebf36b5d")
+	)
+	(junction
+		(at 157.48 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d39cb600-f4ba-411f-b6f1-011446bbaa9d")
+	)
+	(junction
+		(at 160.02 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "df673b75-2383-4aaf-98f3-6ca33dd2557a")
+	)
+	(junction
 		(at 204.47 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e2405789-c3e4-4899-8902-ff478d95dc0b")
+	)
+	(junction
+		(at 160.02 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fe0dcd0c-61cb-4bea-b8d2-3195254d5571")
 	)
 	(no_connect
 		(at 168.91 77.47)
@@ -2269,6 +2302,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 72.39) (xy 168.91 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e43579a-11d7-40df-bd87-45c59d7d73c0")
+	)
+	(wire
+		(pts
 			(xy 118.11 67.31) (xy 128.27 67.31)
 		)
 		(stroke
@@ -2289,13 +2332,13 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 72.39) (xy 168.91 72.39)
+			(xy 161.29 111.76) (xy 170.18 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "17f7103e-2d85-4939-af43-2d9d5f3658ef")
+		(uuid "17e7a496-7556-4dce-be71-f98b8b685b6e")
 	)
 	(wire
 		(pts
@@ -2349,6 +2392,16 @@
 	)
 	(wire
 		(pts
+			(xy 157.48 74.93) (xy 160.02 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2906a3a6-a284-4fb4-ac5c-22313481763f")
+	)
+	(wire
+		(pts
 			(xy 154.94 111.76) (xy 158.75 111.76)
 		)
 		(stroke
@@ -2356,6 +2409,16 @@
 			(type default)
 		)
 		(uuid "3c33f985-b1ca-4c81-9c92-c00ed750d5d7")
+	)
+	(wire
+		(pts
+			(xy 158.75 109.22) (xy 161.29 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49b35fa7-c302-46a5-a47f-92fc8ab67bfa")
 	)
 	(wire
 		(pts
@@ -2449,6 +2512,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 111.76) (xy 161.29 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "824a3d1c-8a0b-4e72-8c1d-f54a87715ac2")
+	)
+	(wire
+		(pts
 			(xy 134.62 130.81) (xy 121.92 130.81)
 		)
 		(stroke
@@ -2456,6 +2529,16 @@
 			(type default)
 		)
 		(uuid "8398f310-51c7-4426-a4d1-66454b65ddff")
+	)
+	(wire
+		(pts
+			(xy 161.29 109.22) (xy 170.18 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84ef55c7-ba85-45da-93c2-45bfdc9c77b0")
 	)
 	(wire
 		(pts
@@ -2479,16 +2562,6 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 109.22) (xy 170.18 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97e9e17c-68d9-435e-b6dd-1a60a3b2b495")
-	)
-	(wire
-		(pts
 			(xy 76.2 68.58) (xy 77.47 68.58)
 		)
 		(stroke
@@ -2509,6 +2582,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 74.93) (xy 168.91 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7811872-7e3f-45e8-92ff-312e0adc24c8")
+	)
+	(wire
+		(pts
 			(xy 152.4 114.3) (xy 158.75 114.3)
 		)
 		(stroke
@@ -2516,16 +2599,6 @@
 			(type default)
 		)
 		(uuid "a9122a21-bb34-4d07-92c4-989a52411dcc")
-	)
-	(wire
-		(pts
-			(xy 165.1 74.93) (xy 168.91 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a98eefe3-6083-4d10-8181-368a3c17c26f")
 	)
 	(wire
 		(pts
@@ -2579,6 +2652,16 @@
 	)
 	(wire
 		(pts
+			(xy 157.48 72.39) (xy 160.02 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d629c5ef-bdfb-437b-adaf-ad7a50a01ec9")
+	)
+	(wire
+		(pts
 			(xy 78.74 72.39) (xy 81.28 72.39)
 		)
 		(stroke
@@ -2586,16 +2669,6 @@
 			(type default)
 		)
 		(uuid "e05db5db-f996-41eb-9fe0-6be3e1bdbc01")
-	)
-	(wire
-		(pts
-			(xy 166.37 111.76) (xy 170.18 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e748608b-bd46-4276-a0df-188503fe5c1e")
 	)
 	(wire
 		(pts
@@ -2726,7 +2799,7 @@
 		)
 	)
 	(hierarchical_label "TMP2_SDA"
-		(shape input)
+		(shape output)
 		(at 152.4 114.3 180)
 		(effects
 			(font
@@ -2737,7 +2810,7 @@
 		(uuid "00743902-e082-4fa7-8cf1-20851d70dd9d")
 	)
 	(hierarchical_label "WATCHDOG_WDI"
-		(shape input)
+		(shape output)
 		(at 76.2 68.58 180)
 		(effects
 			(font
@@ -2748,7 +2821,7 @@
 		(uuid "34464b65-aecd-4245-ae6c-0f9e04d73d64")
 	)
 	(hierarchical_label "TMP2_SCL"
-		(shape input)
+		(shape output)
 		(at 152.4 105.41 180)
 		(effects
 			(font
@@ -2759,7 +2832,7 @@
 		(uuid "7eef4e8a-0631-4cd4-b5c5-7c7b8bca526d")
 	)
 	(hierarchical_label "TMP1_SCL"
-		(shape input)
+		(shape output)
 		(at 152.4 68.58 180)
 		(effects
 			(font
@@ -2770,7 +2843,7 @@
 		(uuid "9d83a9a1-67c7-42ac-8e65-b6e4509b7a7b")
 	)
 	(hierarchical_label "TMP1_SDA"
-		(shape input)
+		(shape output)
 		(at 152.4 77.47 180)
 		(effects
 			(font
@@ -2792,7 +2865,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0a3f3821-30b3-4d57-b5e2-e66830b78223")
-		(property "Reference" "#PWR0264"
+		(property "Reference" "#PWR0262"
 			(at 130.81 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -2853,7 +2926,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0264")
+					(reference "#PWR0262")
 					(unit 1)
 				)
 			)
@@ -2871,7 +2944,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0bc79013-d01b-4bdc-955b-341289ecaa3e")
-		(property "Reference" "#PWR0262"
+		(property "Reference" "#PWR0260"
 			(at 123.19 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -2932,7 +3005,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0262")
+					(reference "#PWR0260")
 					(unit 1)
 				)
 			)
@@ -2950,7 +3023,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0c769a62-5096-4d7a-af89-3ac82049d794")
-		(property "Reference" "C67"
+		(property "Reference" "C66"
 			(at 114.3 57.1499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2972,7 +3045,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 119.0752 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -3014,7 +3087,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "C67")
+					(reference "C66")
 					(unit 1)
 				)
 			)
@@ -3031,7 +3104,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0d72a016-d9e7-48fc-b253-a662ee945a4d")
-		(property "Reference" "C66"
+		(property "Reference" "C65"
 			(at 73.66 81.28 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3051,7 +3124,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 73.66 83.5152 0)
 			(hide yes)
 			(show_name no)
@@ -3093,7 +3166,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "C66")
+					(reference "C65")
 					(unit 1)
 				)
 			)
@@ -3131,7 +3204,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TLV809K33DBZR:SOT95P280X145-3N"
+		(property "Footprint" "OPL:SOT95P280X145-3N"
 			(at 99.06 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -3341,7 +3414,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 162.56 109.22 90)
+		(at 161.29 105.41 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3351,28 +3424,30 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "33d205e7-68d6-40f2-92fa-5174a6da511e")
-		(property "Reference" "R94"
-			(at 162.56 102.87 90)
+		(property "Reference" "R95"
+			(at 163.83 104.1399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Value" "4.7k"
-			(at 162.56 105.41 90)
+			(at 163.83 106.6799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 162.56 110.998 90)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 163.068 105.41 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3383,7 +3458,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 109.22 0)
+			(at 161.29 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3394,7 +3469,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 162.56 109.22 0)
+			(at 161.29 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3413,7 +3488,85 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "R94")
+					(reference "R95")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 161.29 101.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3e9a974e-17da-4311-a49a-feb936945934")
+		(property "Reference" "#PWR0264"
+			(at 161.29 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 161.29 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 161.29 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 161.29 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 161.29 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "33ee2a5a-2018-412f-ab4f-d0ab431acba4")
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
+					(reference "#PWR0264")
 					(unit 1)
 				)
 			)
@@ -3431,7 +3584,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4baa1143-3b9e-44a7-8ac1-427ad5929e7f")
-		(property "Reference" "R91"
+		(property "Reference" "R92"
 			(at 137.16 135.8899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3453,7 +3606,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 132.842 137.16 90)
 			(hide yes)
 			(show_name no)
@@ -3495,7 +3648,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "R91")
+					(reference "R92")
 					(unit 1)
 				)
 			)
@@ -3503,7 +3656,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 162.56 111.76 90)
+		(at 161.29 115.57 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -3513,8 +3666,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4ce7fac9-82ad-4ba5-b80a-af3646aca0aa")
-		(property "Reference" "R95"
-			(at 162.56 118.11 90)
+		(property "Reference" "R96"
+			(at 167.64 115.57 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3524,7 +3677,7 @@
 			)
 		)
 		(property "Value" "4.7k"
-			(at 162.56 115.57 90)
+			(at 165.1 115.57 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3533,8 +3686,8 @@
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 162.56 109.982 90)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 159.512 115.57 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3545,7 +3698,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 111.76 0)
+			(at 161.29 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3556,7 +3709,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 162.56 111.76 0)
+			(at 161.29 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3575,7 +3728,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "R95")
+					(reference "R96")
 					(unit 1)
 				)
 			)
@@ -3592,7 +3745,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "507a7300-156a-4805-996e-47e62dd01cd7")
-		(property "Reference" "#PWR0256"
+		(property "Reference" "#PWR0254"
 			(at 81.28 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -3652,7 +3805,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0256")
+					(reference "#PWR0254")
 					(unit 1)
 				)
 			)
@@ -3774,7 +3927,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "57333252-f607-4103-8b85-e5a125eda0ab")
-		(property "Reference" "#PWR0261"
+		(property "Reference" "#PWR0259"
 			(at 121.92 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -3834,7 +3987,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0261")
+					(reference "#PWR0259")
 					(unit 1)
 				)
 			)
@@ -3851,7 +4004,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5c8b9f0e-89c5-4f43-9c38-21ca655c0ef5")
-		(property "Reference" "C65"
+		(property "Reference" "C64"
 			(at 73.66 75.946 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3871,7 +4024,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 73.66 78.4352 0)
 			(hide yes)
 			(show_name no)
@@ -3913,7 +4066,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "C65")
+					(reference "C64")
 					(unit 1)
 				)
 			)
@@ -3951,7 +4104,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TMP117AIDRVR:SON65P200X200X80-7N"
+		(property "Footprint" "OPL:SON65P200X200X80-7N"
 			(at 186.69 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -4191,7 +4344,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TPS3430WDRCR:VREG_V62_16624-01YE"
+		(property "Footprint" "OPL:VREG_V62_16624-01YE"
 			(at 99.06 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -4389,7 +4542,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TLV809I50DBZT:SOT95P280X145-3N"
+		(property "Footprint" "OPL:SOT95P280X145-3N"
 			(at 99.06 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -4609,7 +4762,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6dffec72-8d33-4b7c-a269-41841320c70b")
-		(property "Reference" "#PWR0259"
+		(property "Reference" "#PWR0257"
 			(at 116.84 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -4669,7 +4822,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0259")
+					(reference "#PWR0257")
 					(unit 1)
 				)
 			)
@@ -4687,7 +4840,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6e9c67cd-cce6-4640-8d65-466c88949b4e")
-		(property "Reference" "C68"
+		(property "Reference" "C67"
 			(at 121.92 72.3901 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4709,7 +4862,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 117.1448 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -4751,7 +4904,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "C68")
+					(reference "C67")
 					(unit 1)
 				)
 			)
@@ -4768,7 +4921,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6ec44d6d-e16d-4411-bdcc-68aee1d51f9a")
-		(property "Reference" "#PWR0258"
+		(property "Reference" "#PWR0256"
 			(at 81.28 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -4828,7 +4981,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0258")
+					(reference "#PWR0256")
 					(unit 1)
 				)
 			)
@@ -4846,7 +4999,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7958f133-d234-446b-83be-8788ffcafc16")
-		(property "Reference" "#PWR0263"
+		(property "Reference" "#PWR0261"
 			(at 128.27 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -4907,7 +5060,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0263")
+					(reference "#PWR0261")
 					(unit 1)
 				)
 			)
@@ -4925,7 +5078,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7ae65900-c7d4-4db5-a68d-cd9f4133f619")
-		(property "Reference" "#PWR0252"
+		(property "Reference" "#PWR0250"
 			(at 69.85 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -4985,7 +5138,85 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0252")
+					(reference "#PWR0250")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 161.29 119.38 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7b5bbbcd-4c3d-41c8-8328-a8d1c5bd74e1")
+		(property "Reference" "#PWR0309"
+			(at 161.29 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 161.29 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 161.29 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 161.29 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 161.29 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6814c983-e4e6-4841-b778-0da5c41e8096")
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
+					(reference "#PWR0309")
 					(unit 1)
 				)
 			)
@@ -5002,7 +5233,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7d895246-15e6-420e-b235-2b249719c14f")
-		(property "Reference" "#PWR0254"
+		(property "Reference" "#PWR0252"
 			(at 81.28 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -5062,15 +5293,15 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0254")
+					(reference "#PWR0252")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 161.29 72.39 90)
+		(lib_id "power:+3V3")
+		(at 160.02 82.55 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5079,9 +5310,10 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "893dfeb0-c3e3-4003-8d0a-a623ff9f6e59")
-		(property "Reference" "R92"
-			(at 161.29 66.04 90)
+		(uuid "883fb2a8-bc5a-4b48-82e3-1e1217a8dbf2")
+		(property "Reference" "#PWR0310"
+			(at 160.02 78.74 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5090,8 +5322,8 @@
 				)
 			)
 		)
-		(property "Value" "4.7k"
-			(at 161.29 68.58 90)
+		(property "Value" "+3V3"
+			(at 160.02 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5101,7 +5333,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 161.29 74.168 90)
+			(at 160.02 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5112,7 +5344,86 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 161.29 72.39 0)
+			(at 160.02 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 160.02 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dc5ad3b7-5ea7-437b-b775-90476221456e")
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
+					(reference "#PWR0310")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 160.02 68.58 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "893dfeb0-c3e3-4003-8d0a-a623ff9f6e59")
+		(property "Reference" "R93"
+			(at 162.56 69.8501 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 162.56 67.3101 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 161.798 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5123,7 +5434,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 161.29 72.39 0)
+			(at 160.02 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5142,7 +5453,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "R92")
+					(reference "R93")
 					(unit 1)
 				)
 			)
@@ -5254,6 +5565,84 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
+		(at 170.18 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "92b1f3ae-c6ac-4c50-ab7f-8a59b1237b50")
+		(property "Reference" "#PWR0166"
+			(at 170.18 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 170.18 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 170.18 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0be599c9-908c-4985-8bb4-1cfb46d11c66")
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
+					(reference "#PWR0166")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
 		(at 205.74 99.06 0)
 		(mirror y)
 		(unit 1)
@@ -5264,7 +5653,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a8c0a790-dffe-4f22-8c1d-de034cc81c7f")
-		(property "Reference" "#PWR0269"
+		(property "Reference" "#PWR0267"
 			(at 205.74 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -5325,7 +5714,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0269")
+					(reference "#PWR0267")
 					(unit 1)
 				)
 			)
@@ -5343,7 +5732,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ab787fbb-d631-4899-89b7-4a76a3a6bc1c")
-		(property "Reference" "#PWR0268"
+		(property "Reference" "#PWR0266"
 			(at 204.47 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -5403,7 +5792,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0268")
+					(reference "#PWR0266")
 					(unit 1)
 				)
 			)
@@ -5441,7 +5830,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TMP117AIDRVR:SON65P200X200X80-7N"
+		(property "Footprint" "OPL:SON65P200X200X80-7N"
 			(at 187.96 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -5660,7 +6049,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b846e146-89ed-4d10-a709-916badcb90d3")
-		(property "Reference" "#PWR0265"
+		(property "Reference" "#PWR0263"
 			(at 168.91 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -5672,7 +6061,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 166.37 67.564 0)
+			(at 168.91 70.866 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5720,7 +6109,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0265")
+					(reference "#PWR0263")
 					(unit 1)
 				)
 			)
@@ -5738,7 +6127,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c4bde2bc-9fd8-4ad8-86ea-d2a4798b66b5")
-		(property "Reference" "#PWR0257"
+		(property "Reference" "#PWR0255"
 			(at 81.28 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -5799,7 +6188,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0257")
+					(reference "#PWR0255")
 					(unit 1)
 				)
 			)
@@ -5817,7 +6206,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d0292dc1-1d37-4b89-a189-e89368a2fa55")
-		(property "Reference" "#PWR0260"
+		(property "Reference" "#PWR0258"
 			(at 118.11 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -5877,84 +6266,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0260")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 170.18 104.14 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d435ce0b-3fef-40d4-bfb3-9831c9637027")
-		(property "Reference" "#PWR0266"
-			(at 170.18 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 167.64 104.394 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 170.18 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4f4b6143-0f34-41c7-b0df-57bf9561d4bb")
-		)
-		(instances
-			(project "Araneae"
-				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0266")
+					(reference "#PWR0258")
 					(unit 1)
 				)
 			)
@@ -5972,7 +6284,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d732f8f0-f609-42b6-9727-f101d1bbdb6a")
-		(property "Reference" "#PWR0267"
+		(property "Reference" "#PWR0265"
 			(at 204.47 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -6033,7 +6345,85 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0267")
+					(reference "#PWR0265")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 160.02 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "db543fd3-f4a2-48ec-9e2a-12e65dc0772f")
+		(property "Reference" "#PWR0311"
+			(at 160.02 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 160.02 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 160.02 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2ad31cd8-0ea7-4b80-95f5-02dddeb6c475")
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
+					(reference "#PWR0311")
 					(unit 1)
 				)
 			)
@@ -6050,7 +6440,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dcb114f7-7054-4518-9d98-3e74a3d56b2d")
-		(property "Reference" "#PWR0253"
+		(property "Reference" "#PWR0251"
 			(at 81.28 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -6110,7 +6500,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0253")
+					(reference "#PWR0251")
 					(unit 1)
 				)
 			)
@@ -6220,7 +6610,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 161.29 74.93 90)
+		(at 160.02 78.74 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -6230,8 +6620,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e777a7c9-aa7a-4b1a-90b0-91fd6ba427fb")
-		(property "Reference" "R93"
-			(at 161.29 81.28 90)
+		(property "Reference" "R94"
+			(at 166.37 78.74 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6241,7 +6631,7 @@
 			)
 		)
 		(property "Value" "4.7k"
-			(at 161.29 78.74 90)
+			(at 163.83 78.74 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6250,8 +6640,8 @@
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 161.29 73.152 90)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 158.242 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6262,7 +6652,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 161.29 74.93 0)
+			(at 160.02 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6273,7 +6663,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 161.29 74.93 0)
+			(at 160.02 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6292,7 +6682,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "R93")
+					(reference "R94")
 					(unit 1)
 				)
 			)
@@ -6309,7 +6699,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ee8f0759-2687-4471-9c08-78571f5136f2")
-		(property "Reference" "#PWR0255"
+		(property "Reference" "#PWR0253"
 			(at 81.28 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -6369,7 +6759,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0255")
+					(reference "#PWR0253")
 					(unit 1)
 				)
 			)
@@ -6387,7 +6777,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f4e5f2e9-d2da-41b8-bcde-a931146d2196")
-		(property "Reference" "#PWR0270"
+		(property "Reference" "#PWR0268"
 			(at 205.74 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -6447,7 +6837,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0270")
+					(reference "#PWR0268")
 					(unit 1)
 				)
 			)
@@ -6465,7 +6855,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fd6eaef2-40c6-4396-a0dd-07362c36a3c7")
-		(property "Reference" "#PWR0251"
+		(property "Reference" "#PWR0249"
 			(at 69.85 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -6525,7 +6915,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/2cdfbbc6-4cb0-4069-9b4e-412ce48b6d06"
-					(reference "#PWR0251")
+					(reference "#PWR0249")
 					(unit 1)
 				)
 			)

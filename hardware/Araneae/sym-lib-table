@@ -16,6 +16,7 @@
   (lib (name "TLV809K33DBZR")(type "KiCad")(uri "${KIPRJMOD}/party/TLV809K33DBZR.kicad_sym")(options "")(descr "Project symbols"))
   (lib (name "TMP117AIDRVR")(type "KiCad")(uri "${KIPRJMOD}/party/TMP117AIDRVR.kicad_sym")(options "")(descr "Project symbols"))
   (lib (name "TPS22946YZPR")(type "KiCad")(uri "${KIPRJMOD}/party/TPS22946YZPR.kicad_sym")(options "")(descr "Project symbols"))
+  (lib (name "TPS22965DSGR")(type "KiCad")(uri "${KIPRJMOD}/party/TPS22965DSGR.kicad_sym")(options "")(descr "Project symbols"))
   (lib (name "TPS3430WDRCR")(type "KiCad")(uri "${KIPRJMOD}/party/TPS3430WDRCR.kicad_sym")(options "")(descr "Project symbols"))
   (lib (name "TPS54331DG4")(type "KiCad")(uri "${KIPRJMOD}/party/TPS54331DG4.kicad_sym")(options "")(descr "Project symbols"))
   (lib (name "USB2514B_M2")(type "KiCad")(uri "${KIPRJMOD}/party/USB2514B_M2.kicad_sym")(options "")(descr "Project symbols"))

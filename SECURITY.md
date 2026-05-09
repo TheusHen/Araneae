@@ -1,6 +1,6 @@
 # Security policy — Araneae
 
-**Araneae** is an *open hardware* and *open software* project with an explicit commitment: **privacy for people**, **zero telemetry** by design, and **auditability**. This policy describes how to report vulnerabilities responsibly and what to expect in return.
+**Araneae** is an *open hardware* and *open software* project with an explicit commitment: **user-controlled privacy**, **zero telemetry** by design, and **auditability**. This policy describes how to report vulnerabilities responsibly and what to expect in return.
 
 ## Versions and support
 

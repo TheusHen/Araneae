@@ -6,7 +6,7 @@
     (property "Value" "FH12-22S-0.5SH55" (id 1) (at 0 0 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "OPL:CONN_FH12-22S-0.5SH55_HIR" (id 2) (at 0 0 0)
+    (property "Footprint" "CONN_FH12-22S-0.5SH55_HIR" (id 2) (at 0 0 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "FH12-22S-0.5SH55" (id 3) (at 0 0 0)

@@ -1,6 +1,6 @@
 # Code of Conduct — Araneae
 
-**Araneae: Privacy is for the people.** This repository exists to build open, verifiable hardware and software that respect user privacy. This code of conduct protects the same principle in how we work together: no one should be excluded, intimidated, or exposed for participating.
+**Araneae: Your network should answer to you, not report on you.** This repository exists to build open, verifiable hardware and software that respect user privacy. This code of conduct protects the same principle in how we work together: no one should be excluded, intimidated, or exposed for participating.
 
 ## Our pledge
 

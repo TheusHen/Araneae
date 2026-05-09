@@ -2,7 +2,7 @@
 
 Thank you for considering a contribution to **Araneae** — an *open hardware* + *open software* router focused on **real privacy**, **no vendor lock-in**, and **full hackability**, able to replace home infrastructure (router, NAS, and services).
 
-> **Philosophy:** *Privacy is for the people.*  
+> **Philosophy:** *Your network should answer to you, not report on you.*  
 > **Software license:** [UNLICENSE](./UNLICENSE) (public domain), unless a submodule or folder states its own license explicitly.
 
 This document summarizes expectations, scope, and how to send contributions aligned with the project vision.

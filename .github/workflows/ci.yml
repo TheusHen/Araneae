@@ -1,0 +1,113 @@
+name: PCB CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  hardware-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run KiCad ERC on all schematics
+        run: |
+          mkdir -p reports/erc
+
+          find hardware/Araneae -name "*.kicad_sch" | while read file; do
+            echo "Running ERC for $file"
+
+            base=$(basename "$file" .kicad_sch)
+
+            docker run --rm \
+              -v "$PWD:/workspace" \
+              ghcr.io/inti-cmnb/kicad8_auto:latest \
+              kicad-cli sch erc "/workspace/$file" \
+                --output "/workspace/reports/erc/${base}.rpt"
+          done
+
+      - name: Run KiCad DRC on all PCBs
+        run: |
+          mkdir -p reports/drc
+
+          find hardware/Araneae -name "*.kicad_pcb" | while read file; do
+            echo "Running DRC for $file"
+
+            base=$(basename "$file" .kicad_pcb)
+
+            docker run --rm \
+              -v "$PWD:/workspace" \
+              ghcr.io/inti-cmnb/kicad8_auto:latest \
+              kicad-cli pcb drc "/workspace/$file" \
+                --output "/workspace/reports/drc/${base}.rpt"
+          done
+
+      - name: Generate KiCad plots for all PCBs
+        run: |
+          mkdir -p output/plots
+
+          find hardware/Araneae -name "*.kicad_pcb" | while read pcb; do
+            echo "Generating plots for $pcb"
+
+            base=$(basename "$pcb" .kicad_pcb)
+
+            mkdir -p "output/plots/$base"
+
+            docker run --rm \
+              -v "$PWD:/workspace" \
+              ghcr.io/inti-cmnb/kicad8_auto:latest \
+              kicad-cli pcb export pdf "/workspace/$pcb" \
+                --output "/workspace/output/plots/$base/${base}-pcb.pdf"
+
+            docker run --rm \
+              -v "$PWD:/workspace" \
+              ghcr.io/inti-cmnb/kicad8_auto:latest \
+              kicad-cli pcb export svg "/workspace/$pcb" \
+                --output "/workspace/output/plots/$base/svg"
+          done
+
+      - name: Generate fabrication files for all boards with KiBot
+        run: |
+          mkdir -p output/fabrication
+
+          find hardware/Araneae -name "*.kicad_pcb" | while read pcb; do
+            echo "Processing $pcb"
+
+            dir=$(dirname "$pcb")
+            base=$(basename "$pcb" .kicad_pcb)
+
+            sch="$dir/$base.kicad_sch"
+
+            if [ ! -f "$sch" ]; then
+              echo "No schematic found for $base, skipping"
+              continue
+            fi
+
+            mkdir -p "output/fabrication/$base"
+
+            docker run --rm \
+              -v "$PWD:/workspace" \
+              ghcr.io/inti-cmnb/kicad8_auto:latest \
+              kibot \
+                -c "/workspace/hardware/kibot.yaml" \
+                -e "/workspace/$sch" \
+                -b "/workspace/$pcb" \
+                -d "/workspace/output/fabrication/$base"
+          done
+
+      - name: Zip fabrication packages
+        run: |
+          cd output/fabrication
+
+          for dir in */ ; do
+            zip -r "${dir%/}.zip" "$dir"
+          done
+
+      - name: Upload PCB artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pcb-ci-artifacts
+          path: |
+            reports/
+            output/

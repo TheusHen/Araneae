@@ -1,6 +1,6 @@
 # Security model — Araneae
 
-This document describes **assets**, **adversaries**, **trust boundaries**, and **assumptions** for the **Araneae** project, aligned with the *Privacy is for the people* philosophy and the planned technical design (CM4, network, NAS/SSD, LiFePO4 UPS, Rust/C/Assembly, future OpenWrt base).
+This document describes **assets**, **adversaries**, **trust boundaries**, and **assumptions** for the **Araneae** project, aligned with the principle that your network should answer to you, not report on you, and with the planned technical design (CM4, network, NAS/SSD, LiFePO4 UPS, Rust/C/Assembly, future OpenWrt base).
 
 It is not a substitute for formal analysis for commercial certifications; it guides design, contribution review, and communication with users.
 

@@ -4,6 +4,15 @@
 	(generator_version "10.0")
 	(uuid "75ee0d89-23b5-4391-9a5a-b70acff45db3")
 	(paper "A4")
+	(title_block
+		(title "Araneae")
+		(date "2026-05-02")
+		(rev "0.1")
+		(company "Matheus Henrique(Aka: TheusHen)")
+		(comment 1 "dev@theushen.works")
+		(comment 3 "z2mCL9YdujNw7uhfDBhsiKtEFSAYvfbvY")
+		(comment 4 "Donate(Monero): 8A8gezqQ4tuVAPWAYUKB7rB5NRLFWE3RsXWFQLKh3jVAceb9pG4VjA8ApUd8DM")
+	)
 	(lib_symbols
 		(symbol "Connector:Barrel_Jack"
 			(pin_names
@@ -2283,6 +2292,121 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "12V\n"
 		(exclude_from_sim no)
@@ -2331,6 +2455,12 @@
 		(uuid "12a41e7d-9827-4e0e-ac58-a5055ecba6da")
 	)
 	(junction
+		(at 86.36 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4a037181-355a-45cc-9ee1-b2be9a49ea4f")
+	)
+	(junction
 		(at 180.34 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2355,16 +2485,10 @@
 		(uuid "54fa3e92-76c7-414a-ac60-70c48f17f3b1")
 	)
 	(junction
-		(at 49.53 171.45)
+		(at 86.36 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "6ccb2d75-93d7-42b2-b692-a2a18bbfbc76")
-	)
-	(junction
-		(at 86.36 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "723e168f-8738-4e08-b431-042ea5873ba4")
+		(uuid "5e301319-5f2d-4c17-99d2-2ca2d7db2e93")
 	)
 	(junction
 		(at 87.63 143.51)
@@ -2419,6 +2543,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b9d4fc5e-ca09-4538-876e-224ebe88e629")
+	)
+	(junction
+		(at 73.66 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c2b53738-75d5-4991-bc33-c5513aa29150")
 	)
 	(junction
 		(at 109.22 45.72)
@@ -2554,6 +2684,16 @@
 	)
 	(wire
 		(pts
+			(xy 39.37 171.45) (xy 41.91 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d036632-127f-479a-93c7-f764d5363f19")
+	)
+	(wire
+		(pts
 			(xy 109.22 50.8) (xy 101.6 50.8)
 		)
 		(stroke
@@ -2674,6 +2814,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 50.8) (xy 73.66 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6748ea9f-e2f0-41fe-add5-c22fbcd7eef0")
+	)
+	(wire
+		(pts
 			(xy 180.34 59.69) (xy 195.58 59.69)
 		)
 		(stroke
@@ -2681,6 +2831,16 @@
 			(type default)
 		)
 		(uuid "6a4f8e19-d078-46a9-bda3-6b5bcf13d128")
+	)
+	(wire
+		(pts
+			(xy 86.36 80.01) (xy 86.36 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e6b890a-a56a-44c0-93f8-273f3ab1e66f")
 	)
 	(wire
 		(pts
@@ -2821,6 +2981,16 @@
 			(type default)
 		)
 		(uuid "98a26ea2-4b8f-4feb-b622-0975b2357b52")
+	)
+	(wire
+		(pts
+			(xy 87.63 78.74) (xy 86.36 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d73b9ee-7b54-4dce-835c-bc9a72142101")
 	)
 	(wire
 		(pts
@@ -2984,23 +3154,13 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 171.45) (xy 41.91 171.45)
+			(xy 86.36 78.74) (xy 86.36 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f648eab3-049b-4f5d-bc45-6e3e4bc3ad52")
-	)
-	(wire
-		(pts
-			(xy 49.53 171.45) (xy 53.34 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fae879f3-9b57-4dbd-9c08-6fc2af5a16f3")
+		(uuid "fed4163a-7e39-431d-abb7-f8a6fadf8822")
 	)
 	(wire
 		(pts
@@ -3061,17 +3221,17 @@
 	)
 	(global_label "19V"
 		(shape input)
-		(at 53.34 171.45 90)
+		(at 39.37 171.45 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "4aca879e-7be0-450b-a4c1-0b5e7ebdefea")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 53.34 164.9572 90)
+			(at 32.8772 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3079,7 +3239,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -3187,7 +3347,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "09e2c225-3a83-4104-80f2-fb80ae04b9b1")
-		(property "Reference" "C49"
+		(property "Reference" "C48"
 			(at 202.946 85.852 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3209,7 +3369,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 204.7748 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -3251,7 +3411,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C49")
+					(reference "C48")
 					(unit 1)
 				)
 			)
@@ -3268,7 +3428,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1de55b06-2f7a-4277-b517-388cc6ef9735")
-		(property "Reference" "#PWR0175"
+		(property "Reference" "#PWR0173"
 			(at 67.31 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -3328,7 +3488,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0175")
+					(reference "#PWR0173")
 					(unit 1)
 				)
 			)
@@ -3346,7 +3506,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1ed3759a-67fe-4458-8b24-cd35cae0f24e")
-		(property "Reference" "C45"
+		(property "Reference" "C44"
 			(at 187.706 70.358 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3368,7 +3528,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 189.5348 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -3410,7 +3570,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C45")
+					(reference "C44")
 					(unit 1)
 				)
 			)
@@ -3418,7 +3578,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 86.36 76.2 0)
+		(at 86.36 80.01 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -3428,8 +3588,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1fd147d8-4919-49c5-a205-a794a6eb1ce6")
-		(property "Reference" "#PWR0178"
-			(at 86.36 82.55 0)
+		(property "Reference" "#PWR0176"
+			(at 86.36 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3440,7 +3600,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 83.566 79.248 0)
+			(at 83.566 83.058 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3450,7 +3610,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 76.2 0)
+			(at 86.36 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3461,7 +3621,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 76.2 0)
+			(at 86.36 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3472,7 +3632,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 86.36 76.2 0)
+			(at 86.36 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3488,7 +3648,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0178")
+					(reference "#PWR0176")
 					(unit 1)
 				)
 			)
@@ -3506,7 +3666,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "220126e7-6825-48df-9466-d7acefd23ab1")
-		(property "Reference" "J6"
+		(property "Reference" "J7"
 			(at 41.91 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -3528,7 +3688,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal"
 			(at 43.18 181.356 0)
 			(hide yes)
 			(show_name no)
@@ -3570,7 +3730,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "J6")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -3588,7 +3748,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "244c029b-1f89-4698-ac53-5f8f8255c38a")
-		(property "Reference" "R40"
+		(property "Reference" "R41"
 			(at 62.738 58.166 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3610,7 +3770,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 66.548 59.69 90)
 			(hide yes)
 			(show_name no)
@@ -3652,7 +3812,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "R40")
+					(reference "R41")
 					(unit 1)
 				)
 			)
@@ -3692,7 +3852,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_10.4x10.4_H4.8"
 			(at 180.34 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -3752,7 +3912,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2774fc50-5a58-4482-baa2-e9e81caf1d31")
-		(property "Reference" "C33"
+		(property "Reference" "C32"
 			(at 51.816 48.768 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3774,7 +3934,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 53.6448 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -3816,7 +3976,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C33")
+					(reference "C32")
 					(unit 1)
 				)
 			)
@@ -3833,7 +3993,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "28f39667-c842-485a-94a7-91773456dc15")
-		(property "Reference" "C46"
+		(property "Reference" "C45"
 			(at 196.596 49.022 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3855,7 +4015,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 205.74 49.8348 0)
 			(hide yes)
 			(show_name no)
@@ -3897,7 +4057,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C46")
+					(reference "C45")
 					(unit 1)
 				)
 			)
@@ -3915,7 +4075,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c860197-e97e-4107-b109-b424bd1f67dd")
-		(property "Reference" "C42"
+		(property "Reference" "C41"
 			(at 132.08 106.6799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3937,7 +4097,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 129.2352 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -3979,7 +4139,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C42")
+					(reference "C41")
 					(unit 1)
 				)
 			)
@@ -3997,7 +4157,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2f81e488-cd0c-4942-9e41-a3097c09ffa9")
-		(property "Reference" "R44"
+		(property "Reference" "R45"
 			(at 106.6799 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4019,7 +4179,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 107.95 61.722 90)
 			(hide yes)
 			(show_name no)
@@ -4061,7 +4221,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "R44")
+					(reference "R45")
 					(unit 1)
 				)
 			)
@@ -4079,7 +4239,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "351c4566-04ad-4f24-a4aa-2b1bcbbf5d1c")
-		(property "Reference" "C37"
+		(property "Reference" "C36"
 			(at 62.23 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4101,7 +4261,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 63.8048 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -4143,7 +4303,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C37")
+					(reference "C36")
 					(unit 1)
 				)
 			)
@@ -4160,7 +4320,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "37711313-b486-4e1e-b70e-a1faa0adf860")
-		(property "Reference" "C43"
+		(property "Reference" "C42"
 			(at 169.672 77.724 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4182,7 +4342,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 163.83 75.8952 0)
 			(hide yes)
 			(show_name no)
@@ -4224,7 +4384,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C43")
+					(reference "C42")
 					(unit 1)
 				)
 			)
@@ -4261,7 +4421,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SMA"
 			(at 114.3 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -4321,7 +4481,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3a68365f-0152-4f5a-9e89-82c921b791e3")
-		(property "Reference" "#PWR0187"
+		(property "Reference" "#PWR0185"
 			(at 120.65 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -4382,7 +4542,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0187")
+					(reference "#PWR0185")
 					(unit 1)
 				)
 			)
@@ -4400,7 +4560,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b951414-dcdf-4125-bdf2-6177e7c1ef1f")
-		(property "Reference" "#PWR0188"
+		(property "Reference" "#PWR0186"
 			(at 127 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -4460,7 +4620,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0188")
+					(reference "#PWR0186")
 					(unit 1)
 				)
 			)
@@ -4478,7 +4638,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3cc5109c-6b41-49d4-934c-a0d54ea7de8a")
-		(property "Reference" "#PWR0186"
+		(property "Reference" "#PWR0184"
 			(at 119.38 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -4539,7 +4699,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0186")
+					(reference "#PWR0184")
 					(unit 1)
 				)
 			)
@@ -4557,7 +4717,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "42f63831-b9ae-4843-b449-da127902282b")
-		(property "Reference" "C35"
+		(property "Reference" "C34"
 			(at 53.086 116.078 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4579,7 +4739,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 54.9148 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -4621,7 +4781,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C35")
+					(reference "C34")
 					(unit 1)
 				)
 			)
@@ -4718,7 +4878,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "43f9f6a0-69ef-4d59-8909-7511dd6d8c7c")
-		(property "Reference" "#PWR0172"
+		(property "Reference" "#PWR0170"
 			(at 59.69 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -4778,7 +4938,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0172")
+					(reference "#PWR0170")
 					(unit 1)
 				)
 			)
@@ -4807,7 +4967,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Schottky"
+		(property "Value" "SS34"
 			(at 173.99 64.4524 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4818,7 +4978,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SMA"
 			(at 176.53 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -4898,7 +5058,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MP1584EN-LF-Z:SOIC127P600X170-9N"
+		(property "Footprint" "OPL:SOIC127P600X170-9N"
 			(at 73.66 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -5137,7 +5297,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4acf8038-1a05-4002-9ccf-6be779db6390")
-		(property "Reference" "R43"
+		(property "Reference" "R44"
 			(at 72.39 144.7799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5159,7 +5319,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 76.708 146.05 90)
 			(hide yes)
 			(show_name no)
@@ -5201,7 +5361,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "R43")
+					(reference "R44")
 					(unit 1)
 				)
 			)
@@ -5218,7 +5378,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4c5e7bce-5dea-44c3-bdd9-da5831686831")
-		(property "Reference" "C44"
+		(property "Reference" "C43"
 			(at 177.292 77.724 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5240,7 +5400,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 171.45 75.8952 0)
 			(hide yes)
 			(show_name no)
@@ -5282,7 +5442,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C44")
+					(reference "C43")
 					(unit 1)
 				)
 			)
@@ -5299,7 +5459,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4d32cb92-74c9-4a0d-9789-60f95115a268")
-		(property "Reference" "#PWR0197"
+		(property "Reference" "#PWR0195"
 			(at 246.38 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -5359,7 +5519,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0197")
+					(reference "#PWR0195")
 					(unit 1)
 				)
 			)
@@ -5396,7 +5556,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SMA"
 			(at 63.5 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -5455,7 +5615,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "522ca75d-d5bb-42a0-a94a-bc69811ec071")
-		(property "Reference" "C48"
+		(property "Reference" "C47"
 			(at 202.946 78.232 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5477,7 +5637,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 204.7748 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -5519,7 +5679,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C48")
+					(reference "C47")
 					(unit 1)
 				)
 			)
@@ -5557,7 +5717,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_7.3x7.3_H4.5"
 			(at 114.3 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -5617,7 +5777,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "66ee2581-2366-48c3-8c0f-fbd52285805d")
-		(property "Reference" "R45"
+		(property "Reference" "R46"
 			(at 107.9499 133.35 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5639,7 +5799,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 109.22 129.032 90)
 			(hide yes)
 			(show_name no)
@@ -5681,7 +5841,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "R45")
+					(reference "R46")
 					(unit 1)
 				)
 			)
@@ -5699,7 +5859,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "690e0e09-2164-4289-80fd-daaf52fc8581")
-		(property "Reference" "R41"
+		(property "Reference" "R42"
 			(at 64.008 125.476 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5721,7 +5881,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 67.818 127 90)
 			(hide yes)
 			(show_name no)
@@ -5763,7 +5923,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "R41")
+					(reference "R42")
 					(unit 1)
 				)
 			)
@@ -5801,7 +5961,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TPS54331DG4:SOIC127P599X175-8N"
+		(property "Footprint" "OPL:SOIC127P599X175-8N"
 			(at 228.6 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -5988,7 +6148,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "79ca9692-44d8-4cb9-8fb2-67670f6ec5d6")
-		(property "Reference" "C36"
+		(property "Reference" "C35"
 			(at 53.086 123.698 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6010,7 +6170,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 54.9148 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -6052,7 +6212,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C36")
+					(reference "C35")
 					(unit 1)
 				)
 			)
@@ -6070,7 +6230,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7b20373e-ae9d-42c6-ae13-d7f572300689")
-		(property "Reference" "R42"
+		(property "Reference" "R43"
 			(at 71.12 77.4699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6092,7 +6252,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 75.438 78.74 90)
 			(hide yes)
 			(show_name no)
@@ -6134,7 +6294,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "R42")
+					(reference "R43")
 					(unit 1)
 				)
 			)
@@ -6152,7 +6312,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7bf730f4-0784-45fe-8297-13dc61376e98")
-		(property "Reference" "#PWR0170"
+		(property "Reference" "#PWR0168"
 			(at 54.61 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -6212,7 +6372,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0170")
+					(reference "#PWR0168")
 					(unit 1)
 				)
 			)
@@ -6230,7 +6390,7 @@
 		(dnp no)
 		(uuid "81e4a57a-5f45-4d3f-8030-d9c23098e3e5")
 		(property "Reference" "F2"
-			(at 45.466 174.752 90)
+			(at 45.72 173.99 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6239,7 +6399,7 @@
 				)
 			)
 		)
-		(property "Value" "Polyfuse"
+		(property "Value" "3A"
 			(at 45.72 169.418 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6249,7 +6409,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_1812_4532Metric"
 			(at 50.8 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -6309,7 +6469,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "88b81a23-3226-4eb8-b6ff-2b1f43359ff1")
-		(property "Reference" "#PWR0184"
+		(property "Reference" "#PWR0182"
 			(at 118.11 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -6369,7 +6529,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0184")
+					(reference "#PWR0182")
 					(unit 1)
 				)
 			)
@@ -6387,7 +6547,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "894e47d7-9e79-4d42-b4e3-b45f462e25d8")
-		(property "Reference" "#PWR0171"
+		(property "Reference" "#PWR0169"
 			(at 55.88 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -6447,7 +6607,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0171")
+					(reference "#PWR0169")
 					(unit 1)
 				)
 			)
@@ -6484,7 +6644,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SMA"
 			(at 113.03 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -6544,7 +6704,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "90d511ee-b0d5-4a7b-87d5-579a5f277816")
-		(property "Reference" "#PWR0194"
+		(property "Reference" "#PWR0192"
 			(at 190.5 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -6604,7 +6764,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0194")
+					(reference "#PWR0192")
 					(unit 1)
 				)
 			)
@@ -6621,7 +6781,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "99e5341f-7260-4bd9-877e-703e641752ed")
-		(property "Reference" "#PWR0182"
+		(property "Reference" "#PWR0180"
 			(at 116.84 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -6681,7 +6841,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0182")
+					(reference "#PWR0180")
 					(unit 1)
 				)
 			)
@@ -6698,7 +6858,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9cb61183-a20c-494e-b5a3-14e480b7389f")
-		(property "Reference" "C47"
+		(property "Reference" "C46"
 			(at 202.946 70.612 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6720,7 +6880,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 204.7748 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -6762,7 +6922,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C47")
+					(reference "C46")
 					(unit 1)
 				)
 			)
@@ -6780,7 +6940,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a30068ab-7445-4471-b084-086de3bdafe4")
-		(property "Reference" "#PWR0190"
+		(property "Reference" "#PWR0188"
 			(at 128.27 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -6840,7 +7000,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0190")
+					(reference "#PWR0188")
 					(unit 1)
 				)
 			)
@@ -6858,7 +7018,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "adf5a676-2679-4437-83ee-a1eba6e80d9d")
-		(property "Reference" "R47"
+		(property "Reference" "R48"
 			(at 119.3799 133.35 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6880,7 +7040,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 120.65 129.032 90)
 			(hide yes)
 			(show_name no)
@@ -6922,7 +7082,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "R47")
+					(reference "R48")
 					(unit 1)
 				)
 			)
@@ -6939,7 +7099,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "aeb52e9f-001d-4005-9367-02da00f842c0")
-		(property "Reference" "#PWR0198"
+		(property "Reference" "#PWR0196"
 			(at 250.19 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -6999,7 +7159,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0198")
+					(reference "#PWR0196")
 					(unit 1)
 				)
 			)
@@ -7016,7 +7176,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "aeee3709-2f36-485b-b569-56b129027194")
-		(property "Reference" "C50"
+		(property "Reference" "C49"
 			(at 252.984 64.008 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7038,7 +7198,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 251.1552 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -7080,7 +7240,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C50")
+					(reference "C49")
 					(unit 1)
 				)
 			)
@@ -7098,7 +7258,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b2722bed-427e-4d57-bcd1-a8fd1c3020c8")
-		(property "Reference" "#PWR0174"
+		(property "Reference" "#PWR0172"
 			(at 66.04 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -7158,7 +7318,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0174")
+					(reference "#PWR0172")
 					(unit 1)
 				)
 			)
@@ -7176,7 +7336,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b2824d30-9ab6-4120-b137-b624f49c2b48")
-		(property "Reference" "#PWR0193"
+		(property "Reference" "#PWR0191"
 			(at 176.53 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -7236,7 +7396,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0193")
+					(reference "#PWR0191")
 					(unit 1)
 				)
 			)
@@ -7254,7 +7414,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b7462a7f-57ca-48b9-882b-57320a9346a1")
-		(property "Reference" "C38"
+		(property "Reference" "C37"
 			(at 63.5 133.35 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7276,7 +7436,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 65.0748 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -7318,7 +7478,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C38")
+					(reference "C37")
 					(unit 1)
 				)
 			)
@@ -7356,7 +7516,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MP1584EN-LF-Z:SOIC127P600X170-9N"
+		(property "Footprint" "OPL:SOIC127P600X170-9N"
 			(at 74.93 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -7595,7 +7755,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b958e32a-b394-4499-8269-02c7a710b2ca")
-		(property "Reference" "#PWR0176"
+		(property "Reference" "#PWR0174"
 			(at 73.66 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -7655,7 +7815,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0176")
+					(reference "#PWR0174")
 					(unit 1)
 				)
 			)
@@ -7672,7 +7832,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b96606c9-e239-4342-9cc9-5ecd8af26272")
-		(property "Reference" "#PWR0196"
+		(property "Reference" "#PWR0194"
 			(at 229.87 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -7732,7 +7892,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0196")
+					(reference "#PWR0194")
 					(unit 1)
 				)
 			)
@@ -7750,7 +7910,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb99a81b-26e3-46b3-86c8-fa5862d0c96d")
-		(property "Reference" "R50"
+		(property "Reference" "R51"
 			(at 252.73 57.1499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7772,7 +7932,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 248.412 58.42 90)
 			(hide yes)
 			(show_name no)
@@ -7814,7 +7974,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "R50")
+					(reference "R51")
 					(unit 1)
 				)
 			)
@@ -7831,7 +7991,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bcb2e83a-2ccc-4314-9f88-4e5a320460a8")
-		(property "Reference" "#PWR0169"
+		(property "Reference" "#PWR0167"
 			(at 49.53 191.77 0)
 			(hide yes)
 			(show_name no)
@@ -7891,7 +8051,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0169")
+					(reference "#PWR0167")
 					(unit 1)
 				)
 			)
@@ -7909,7 +8069,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bf04bfbf-8db8-4a73-8eac-49d950a2f5a4")
-		(property "Reference" "C34"
+		(property "Reference" "C33"
 			(at 51.816 56.388 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7931,7 +8091,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 53.6448 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -7973,7 +8133,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C34")
+					(reference "C33")
 					(unit 1)
 				)
 			)
@@ -7991,7 +8151,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bf0d709f-da72-4b1c-98ff-ba5b2170d07d")
-		(property "Reference" "R48"
+		(property "Reference" "R49"
 			(at 214.63 90.17 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8011,7 +8171,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 214.63 98.298 90)
 			(hide yes)
 			(show_name no)
@@ -8053,7 +8213,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "R48")
+					(reference "R49")
 					(unit 1)
 				)
 			)
@@ -8071,7 +8231,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c0c540a1-f46c-4619-afd5-47a00e1c07b6")
-		(property "Reference" "R49"
+		(property "Reference" "R50"
 			(at 223.5199 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8093,7 +8253,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 224.79 98.298 90)
 			(hide yes)
 			(show_name no)
@@ -8135,7 +8295,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "R49")
+					(reference "R50")
 					(unit 1)
 				)
 			)
@@ -8153,7 +8313,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c113a317-e94c-499e-9336-7709ccbb090b")
-		(property "Reference" "#PWR0173"
+		(property "Reference" "#PWR0171"
 			(at 64.77 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -8213,7 +8373,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0173")
+					(reference "#PWR0171")
 					(unit 1)
 				)
 			)
@@ -8230,7 +8390,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c9a15532-f21c-42ec-bb43-4b9f738fa90b")
-		(property "Reference" "#PWR0191"
+		(property "Reference" "#PWR0189"
 			(at 128.27 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -8290,7 +8450,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0191")
+					(reference "#PWR0189")
 					(unit 1)
 				)
 			)
@@ -8307,7 +8467,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cfc7c547-ed52-4109-b8b4-345ddcbd8961")
-		(property "Reference" "#PWR0189"
+		(property "Reference" "#PWR0187"
 			(at 127 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -8367,7 +8527,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0189")
+					(reference "#PWR0187")
 					(unit 1)
 				)
 			)
@@ -8385,7 +8545,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d2552d43-d6a5-449b-8b45-2aa50244eb84")
-		(property "Reference" "#PWR0183"
+		(property "Reference" "#PWR0181"
 			(at 118.11 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -8445,7 +8605,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0183")
+					(reference "#PWR0181")
 					(unit 1)
 				)
 			)
@@ -8462,7 +8622,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d5cfc589-9a97-4de1-b17a-6a019a2f4fd2")
-		(property "Reference" "C39"
+		(property "Reference" "C38"
 			(at 102.87 39.878 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8482,7 +8642,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 109.22 44.7548 0)
 			(hide yes)
 			(show_name no)
@@ -8524,7 +8684,84 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C39")
+					(reference "C38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 87.63 78.74 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d77825a1-af65-4d37-b4ea-4c25533ba8fd")
+		(property "Reference" "#FLG020"
+			(at 89.535 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 91.44 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 87.63 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 87.63 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c5e4c38d-53fe-452f-b9f2-1db4b9d7b3f5")
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
+					(reference "#FLG020")
 					(unit 1)
 				)
 			)
@@ -8542,7 +8779,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dcbcb2a6-ccfa-4acd-b4aa-5d39f37c40da")
-		(property "Reference" "C41"
+		(property "Reference" "C40"
 			(at 130.81 39.3699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8564,7 +8801,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 127.9652 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -8606,7 +8843,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C41")
+					(reference "C40")
 					(unit 1)
 				)
 			)
@@ -8624,7 +8861,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "deb28908-4a5b-47fe-88fc-248c82d2ec52")
-		(property "Reference" "R46"
+		(property "Reference" "R47"
 			(at 118.1099 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8646,7 +8883,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 119.38 61.722 90)
 			(hide yes)
 			(show_name no)
@@ -8688,7 +8925,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "R46")
+					(reference "R47")
 					(unit 1)
 				)
 			)
@@ -8706,7 +8943,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dec1763c-b03d-40de-8466-fa2730b5fa90")
-		(property "Reference" "#PWR0195"
+		(property "Reference" "#PWR0193"
 			(at 205.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -8766,7 +9003,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0195")
+					(reference "#PWR0193")
 					(unit 1)
 				)
 			)
@@ -8784,7 +9021,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e0f08f6a-4f91-40e9-a3f4-45bd36469365")
-		(property "Reference" "#PWR0180"
+		(property "Reference" "#PWR0178"
 			(at 102.87 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -8844,7 +9081,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0180")
+					(reference "#PWR0178")
 					(unit 1)
 				)
 			)
@@ -8862,7 +9099,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e88d8301-1735-4f09-979a-ec3e00f4bab9")
-		(property "Reference" "#PWR0185"
+		(property "Reference" "#PWR0183"
 			(at 119.38 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -8922,7 +9159,84 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0185")
+					(reference "#PWR0183")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 68.58 50.8 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e95692d7-75db-4d89-a16a-f376448a78c0")
+		(property "Reference" "#FLG019"
+			(at 68.58 52.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 68.58 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.58 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 68.58 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2478d97a-839d-4d0a-93d4-7d4e475a276a")
+		)
+		(instances
+			(project "Araneae"
+				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
+					(reference "#FLG019")
 					(unit 1)
 				)
 			)
@@ -8960,7 +9274,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_7.3x7.3_H4.5"
 			(at 113.03 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -9019,7 +9333,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "eb98421b-6df6-4a64-b6cf-6883a64df295")
-		(property "Reference" "C40"
+		(property "Reference" "C39"
 			(at 104.14 107.188 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9039,7 +9353,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 110.49 112.0648 0)
 			(hide yes)
 			(show_name no)
@@ -9081,84 +9395,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "C40")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 34.29 171.45 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f79fe6ee-5c5e-4762-b541-07683d890314")
-		(property "Reference" "#PWR0168"
-			(at 34.29 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 30.48 172.466 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 34.29 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 34.29 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 34.29 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "590443c3-de50-4574-b80e-f38fadf29980")
-		)
-		(instances
-			(project "Araneae"
-				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0168")
+					(reference "C39")
 					(unit 1)
 				)
 			)
@@ -9176,7 +9413,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fb1ab460-1b25-4828-b09c-361c62d6447f")
-		(property "Reference" "#PWR0179"
+		(property "Reference" "#PWR0177"
 			(at 87.63 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -9236,7 +9473,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0179")
+					(reference "#PWR0177")
 					(unit 1)
 				)
 			)
@@ -9254,7 +9491,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fcf71d73-ca3b-4eb0-bf83-a9e79aad33ea")
-		(property "Reference" "#PWR0177"
+		(property "Reference" "#PWR0175"
 			(at 74.93 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -9314,7 +9551,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0177")
+					(reference "#PWR0175")
 					(unit 1)
 				)
 			)
@@ -9332,7 +9569,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ff02ebdf-bb42-4f9d-8f20-19a1cc1c386f")
-		(property "Reference" "#PWR0192"
+		(property "Reference" "#PWR0190"
 			(at 163.83 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -9392,7 +9629,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0192")
+					(reference "#PWR0190")
 					(unit 1)
 				)
 			)
@@ -9410,7 +9647,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ff5e2e6d-e4fd-406b-a924-2cba8c4cb46d")
-		(property "Reference" "#PWR0181"
+		(property "Reference" "#PWR0179"
 			(at 104.14 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -9470,7 +9707,7 @@
 		(instances
 			(project "Araneae"
 				(path "/85de7642-e794-401c-85be-fb38a853ef19/b4cf24cd-404d-4415-a551-621a3a68c592"
-					(reference "#PWR0181")
+					(reference "#PWR0179")
 					(unit 1)
 				)
 			)
