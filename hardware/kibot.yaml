@@ -4,12 +4,6 @@ kibot:
 global:
   output: "%f-%i.%x"
 
-preflight:
-  run_drc: true
-  run_erc: true
-  check_zone_fills: true
-  ignore_unconnected: false
-
 outputs:
 
   # GERBERS
@@ -39,35 +33,7 @@ outputs:
     options:
       format: csv
 
-  # SCHEMATIC PDF
-  - name: schematic_pdf
-    type: pdf_sch
-    dir: docs
-
-  # PCB PDF
-  - name: pcb_pdf
-    type: pdf_pcb
-    dir: docs
-
-  # SVG PCB
-  - name: pcb_svg
-    type: svg
-    dir: docs
-
   # STEP 3D MODEL
   - name: step
     type: step
     dir: 3d
-
-  # RENDER 3D
-  - name: render_top
-    type: render_3d
-    dir: renders
-    options:
-      view: top
-
-  - name: render_bottom
-    type: render_3d
-    dir: renders
-    options:
-      view: bottom
