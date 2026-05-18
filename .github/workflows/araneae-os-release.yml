@@ -48,16 +48,22 @@ jobs:
       - name: Collect image artifact
         run: |
           mkdir -p release
-          img=$(find dist -maxdepth 1 -name '*.img.gz' | head -n1)
+          dist_dir="araneae-os/dist"
+          img=$(find "$dist_dir" -maxdepth 1 -name '*-ext4-factory.img.gz' | head -n1)
 
           if [ -z "$img" ]; then
-            echo "No .img.gz file found in dist/" >&2
+            img=$(find "$dist_dir" -maxdepth 1 -name '*.img.gz' | head -n1)
+          fi
+
+          if [ -z "$img" ]; then
+            echo "No .img.gz file found in ${dist_dir}/" >&2
             find . -maxdepth 3 -type f | sort
             exit 1
           fi
 
           cp "$img" "release/${ARTIFACT_NAME}"
           sha256sum "release/${ARTIFACT_NAME}" > "release/${ARTIFACT_NAME}.sha256"
+          find "$dist_dir" -maxdepth 1 \( -name '*.manifest' -o -name '*.json' \) -exec cp {} release/ \;
           ls -lh release
 
       - name: Upload build artifact
