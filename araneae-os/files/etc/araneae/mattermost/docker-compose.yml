@@ -1,0 +1,44 @@
+services:
+  postgres:
+    image: postgres:${POSTGRES_IMAGE_TAG:-15-alpine}
+    container_name: araneae-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-mattermost}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-mattermost}
+    volumes:
+      - ./volumes/postgres:/var/lib/postgresql/data
+    networks:
+      - araneae-mm
+
+  mattermost:
+    image: mattermost/mattermost-team-edition:${MATTERMOST_IMAGE_TAG:-release-10.5}
+    container_name: araneae-mattermost
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      MM_SQLSETTINGS_DRIVERNAME: postgres
+      MM_SQLSETTINGS_DATASOURCE: postgres://${POSTGRES_USER:-mattermost}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-mattermost}?sslmode=disable&connect_timeout=10
+      MM_SERVICESETTINGS_SITEURL: ${MATTERMOST_SITE_URL:-http://10.66.66.1:8065}
+      MM_SERVICESETTINGS_LISTENADDRESS: :8065
+      MM_TEAMSETTINGS_ENABLEOPENSERVER: "false"
+      MM_EMAILSETTINGS_SENDEMAILNOTIFICATIONS: "false"
+      MM_PLUGINSETTINGS_ENABLEUPLOADS: "true"
+      MM_FILESETTINGS_DIRECTORY: /mattermost/data
+    ports:
+      - "${ARANAE_WG_SERVER_IP:-10.66.66.1}:${ARANAE_MATTERMOST_PORT:-8065}:8065"
+    volumes:
+      - ./volumes/mattermost/config:/mattermost/config
+      - ./volumes/mattermost/data:/mattermost/data
+      - ./volumes/mattermost/logs:/mattermost/logs
+      - ./volumes/mattermost/plugins:/mattermost/plugins
+      - ./volumes/mattermost/client-plugins:/mattermost/client/plugins
+      - ./volumes/mattermost/bleve-indexes:/mattermost/bleve-indexes
+    networks:
+      - araneae-mm
+
+networks:
+  araneae-mm:
+    driver: bridge

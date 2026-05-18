@@ -1,0 +1,36 @@
+#!/bin/sh
+set -eu
+. /etc/araneae/araneae.env
+
+mkdir -p /etc/wireguard /etc/araneae/wireguard
+chmod 700 /etc/wireguard /etc/araneae/wireguard
+umask 077
+
+if [ ! -s /etc/wireguard/server_private.key ]; then
+  wg genkey > /etc/wireguard/server_private.key
+  wg pubkey < /etc/wireguard/server_private.key > /etc/wireguard/server_public.key
+fi
+
+WG_PRIV="$(cat /etc/wireguard/server_private.key)"
+
+uci -q delete network.wg0 || true
+uci set network.wg0='interface'
+uci set network.wg0.proto='wireguard'
+uci set network.wg0.private_key="$WG_PRIV"
+uci set network.wg0.listen_port="$ARANAE_WG_PORT"
+uci -q delete network.wg0.addresses || true
+uci add_list network.wg0.addresses="$ARANAE_WG_CIDR"
+uci commit network
+
+cat > /etc/araneae/wireguard/server-info.txt <<INFO
+Araneae OS WireGuard server created on first boot.
+Server VPN IP: ${ARANAE_WG_SERVER_IP}
+Server VPN CIDR: ${ARANAE_WG_CIDR}
+Listen UDP port: ${ARANAE_WG_PORT}
+Server public key: $(cat /etc/wireguard/server_public.key)
+
+Create a client peer with:
+  /etc/araneae/scripts/create-wg-peer.sh phone 10.66.66.2 YOUR_PUBLIC_IP_OR_DDNS
+INFO
+
+exit 0

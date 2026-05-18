@@ -1,0 +1,85 @@
+name: Araneae OS Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'araneae-os/**'
+  pull_request:
+    paths:
+      - 'araneae-os/**'
+  workflow_dispatch:
+
+jobs:
+  build-and-release-os:
+    name: Build and release Araneae OS
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    permissions:
+      contents: write
+
+    env:
+      PROFILE_ENV: araneae-os/profiles/rpi4-cm4.env
+      BUILD_SCRIPT: araneae-os/scripts/build-imagebuilder.sh
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y build-essential curl file gawk gettext git libncurses-dev libssl-dev python3 rsync unzip wget zstd
+
+      - name: Load OS version
+        run: |
+          source "$PROFILE_ENV"
+          echo "OPENWRT_VERSION=${OPENWRT_VERSION}" >> "$GITHUB_ENV"
+          echo "RELEASE_TAG=araneae-os-${OPENWRT_VERSION}-${GITHUB_RUN_NUMBER}" >> "$GITHUB_ENV"
+          echo "RELEASE_NAME=Araneae OS ${OPENWRT_VERSION} (#${GITHUB_RUN_NUMBER})" >> "$GITHUB_ENV"
+          echo "ARTIFACT_NAME=araneae-os-rpi4-cm4-${OPENWRT_VERSION}-${GITHUB_RUN_NUMBER}.img.gz" >> "$GITHUB_ENV"
+
+      - name: Build Araneae OS image
+        run: |
+          chmod +x "$BUILD_SCRIPT"
+          bash "$BUILD_SCRIPT" "$PROFILE_ENV"
+
+      - name: Collect image artifact
+        run: |
+          mkdir -p release
+          dist_dir="araneae-os/dist"
+          img=$(find "$dist_dir" -maxdepth 1 -name '*-ext4-factory.img.gz' | head -n1)
+
+          if [ -z "$img" ]; then
+            img=$(find "$dist_dir" -maxdepth 1 -name '*.img.gz' | head -n1)
+          fi
+
+          if [ -z "$img" ]; then
+            echo "No .img.gz file found in ${dist_dir}/" >&2
+            find . -maxdepth 3 -type f | sort
+            exit 1
+          fi
+
+          cp "$img" "release/${ARTIFACT_NAME}"
+          sha256sum "release/${ARTIFACT_NAME}" > "release/${ARTIFACT_NAME}.sha256"
+          find "$dist_dir" -maxdepth 1 \( -name '*.manifest' -o -name '*.json' \) -exec cp {} release/ \;
+          ls -lh release
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: araneae-os-image
+          path: release/*
+
+      - name: Create OS release
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "$RELEASE_TAG" release/* \
+            --title "$RELEASE_NAME" \
+            --notes "Automated Araneae OS build for changes under araneae-os/.
+
+          Source commit: $GITHUB_SHA" \
+            --target "$GITHUB_SHA"

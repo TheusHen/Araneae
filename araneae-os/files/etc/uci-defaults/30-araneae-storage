@@ -1,0 +1,31 @@
+#!/bin/sh
+set -eu
+
+mkdir -p /srv /srv/araneae /srv/docker
+
+# Safe by default: do not format disks automatically.
+# If you create /etc/araneae/allow-auto-format-nvme before first boot, this will format /dev/nvme0n1.
+if [ -e /dev/nvme0n1 ] && [ -f /etc/araneae/allow-auto-format-nvme ] && ! block info /dev/nvme0n1p1 >/dev/null 2>&1; then
+  echo 'Araneae: auto-formatting /dev/nvme0n1 because allow-auto-format-nvme exists.' | logger -t araneae-storage
+  parted -s /dev/nvme0n1 mklabel gpt mkpart primary ext4 1MiB 100%
+  sleep 2
+  mkfs.ext4 -F /dev/nvme0n1p1
+fi
+
+# Auto-mount existing NVMe first partition at /srv when it has a filesystem.
+if block info /dev/nvme0n1p1 >/dev/null 2>&1; then
+  UUID="$(block info /dev/nvme0n1p1 | sed -n "s/.*UUID=\"\([^\"]*\)\".*/\1/p")"
+  if [ -n "$UUID" ]; then
+    uci -q delete fstab.araneae_srv || true
+    uci set fstab.araneae_srv='mount'
+    uci set fstab.araneae_srv.enabled='1'
+    uci set fstab.araneae_srv.uuid="$UUID"
+    uci set fstab.araneae_srv.target='/srv'
+    uci set fstab.araneae_srv.options='rw,sync,noatime'
+    uci commit fstab
+    /etc/init.d/fstab enable || true
+    /etc/init.d/fstab restart || true
+  fi
+fi
+
+exit 0

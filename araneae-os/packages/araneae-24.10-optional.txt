@@ -1,0 +1,25 @@
+# Optional / board-specific packages. Enable only after confirming package availability
+# for your OpenWrt target/release.
+
+# SSH alternative. The build script can do this automatically with SSH_SERVER=openssh.
+# -dropbear
+# openssh-server
+# openssh-sftp-server
+
+# Switch drivers: KSZ9893/KSZ9896 usually need a correct device tree + Linux DSA driver.
+# Exact package names vary by kernel/target. For many OpenWrt builds you may need
+# kmod-phy-microchip, a DSA-capable KSZ driver built into the kernel, or a custom patch.
+# kmod-phy-microchip
+# kmod-dsa
+# kmod-dsa-ks8995
+
+# Extra Docker UI, not required for Mattermost.
+# luci-app-dockerman
+
+# Extra storage stack.
+# kmod-fuse
+# mergerfs
+
+# Extra security/ops tools.
+# tcpdump
+# openssl-util

@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+
+mkdir -p /srv/araneae/mattermost
+cp -n /etc/araneae/mattermost/docker-compose.yml /srv/araneae/mattermost/docker-compose.yml
+cp -n /etc/araneae/mattermost/.env.template /srv/araneae/mattermost/.env.template
+
+/etc/init.d/araneae-mattermost enable || true
+# Start in background; first Docker image pull can take a while.
+(/etc/init.d/araneae-mattermost start || true) >/tmp/araneae-mattermost-firstboot.log 2>&1 &
+
+exit 0
