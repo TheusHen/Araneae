@@ -77,7 +77,24 @@ cd "$BUILD_DIR/$IMAGEBUILDER_NAME"
 
 echo "Building Araneae OS image for profile ${OPENWRT_PROFILE}..."
 echo "Package count: $(wc -w <<< "$PACKAGES")"
-make image PROFILE="$OPENWRT_PROFILE" PACKAGES="$PACKAGES" FILES="$OVERLAY_DIR"
+
+MAKE_ARGS=(
+  image
+  "PROFILE=$OPENWRT_PROFILE"
+  "PACKAGES=$PACKAGES"
+  "FILES=$OVERLAY_DIR"
+)
+
+if [[ -n "${OPENWRT_ROOTFS_PARTSIZE_MB:-}" ]]; then
+  echo "Rootfs partition size: ${OPENWRT_ROOTFS_PARTSIZE_MB} MB"
+  MAKE_ARGS+=("ROOTFS_PARTSIZE=$OPENWRT_ROOTFS_PARTSIZE_MB")
+fi
+
+if [[ -n "${OPENWRT_MAKE_VERBOSE:-}" ]]; then
+  MAKE_ARGS+=("V=$OPENWRT_MAKE_VERBOSE")
+fi
+
+make "${MAKE_ARGS[@]}"
 
 OUT_DIR="bin/targets/${OPENWRT_TARGET}"
 if [[ -d "$OUT_DIR" ]]; then

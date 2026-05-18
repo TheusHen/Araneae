@@ -25,9 +25,12 @@ Target: bcm27xx/bcm2711
 Profile: rpi-4
 Package manager: opkg
 Hardware: Raspberry Pi CM4 / Raspberry Pi 4 class boards
+Rootfs partition: 1024 MB
 ```
 
 Why 24.10.x? Your current flow uses `opkg`. OpenWrt 25.x/snapshot branches may use different packaging behavior, so keep a separate branch when migrating.
+
+The image uses a larger rootfs partition than OpenWrt's small default because LuCI, Docker, storage packages, and Mattermost support do not fit reliably in the default Raspberry Pi image size.
 
 ---
 
