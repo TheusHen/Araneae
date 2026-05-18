@@ -7,3 +7,7 @@
 *.gerber filter=lfs diff=lfs merge=lfs -text
 *.drl filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
+
+# Firmware scripts and OpenWrt overlays must keep LF line endings.
+.github/workflows/*.yml text eol=lf
+araneae-os/** text eol=lf

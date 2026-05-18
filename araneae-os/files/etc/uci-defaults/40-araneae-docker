@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+
+mkdir -p /srv/docker
+if uci -q get dockerd.globals >/dev/null; then
+  uci set dockerd.globals.data_root='/srv/docker'
+  uci set dockerd.globals.log_level='warn'
+  uci commit dockerd
+fi
+
+/etc/init.d/dockerd enable || true
+/etc/init.d/dockerd start || true
+
+exit 0

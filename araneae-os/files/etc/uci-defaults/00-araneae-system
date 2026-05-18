@@ -1,0 +1,27 @@
+#!/bin/sh
+set -eu
+. /etc/araneae/araneae.env
+
+uci set system.@system[0].hostname="$ARANAE_HOSTNAME"
+uci set system.@system[0].zonename='America/Sao_Paulo'
+uci set system.@system[0].timezone='<-03>3'
+uci commit system
+
+# Optional appliance-style LAN IP. This assumes first ethernet/LAN interface is the management LAN.
+if uci -q get network.lan >/dev/null; then
+  uci set network.lan.ipaddr="$ARANAE_LAN_IP"
+  uci set network.lan.netmask="$ARANAE_LAN_NETMASK"
+  uci commit network
+fi
+
+# Ensure LuCI/uHTTPd and core daemons come up on boot.
+/etc/init.d/uhttpd enable || true
+/etc/init.d/irqbalance enable || true
+/etc/init.d/collectd enable || true
+/etc/init.d/watchdog enable || true
+
+mkdir -p /etc/araneae/wireguard /srv/araneae /srv/docker
+chmod 700 /etc/araneae/wireguard
+chmod +x /etc/araneae/scripts/*.sh 2>/dev/null || true
+
+exit 0

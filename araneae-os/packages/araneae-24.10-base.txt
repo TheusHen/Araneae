@@ -1,0 +1,78 @@
+# Araneae OS base package set for OpenWrt 24.10.x / opkg
+# Comments and blank lines are ignored by scripts/build-imagebuilder.sh.
+# base-files and busybox are part of base image. dropbear is default unless SSH_SERVER=openssh.
+
+# UI / LuCI
+luci
+luci-ssl
+luci-app-opkg
+luci-app-firewall
+luci-app-statistics
+luci-app-samba4
+luci-app-wireguard
+
+# Network / routing / VPN
+dnsmasq-full
+odhcpd-ipv6only
+odhcp6c
+ppp
+ppp-mod-pppoe
+wireguard-tools
+kmod-wireguard
+ethtool
+irqbalance
+ca-certificates
+curl
+
+# Storage / filesystems
+block-mount
+kmod-nvme
+kmod-usb2
+kmod-usb3
+kmod-usb-storage
+kmod-fs-ext4
+e2fsprogs
+resize2fs
+kmod-fs-exfat
+exfat-fsck
+exfat-mkfs
+kmod-fs-ntfs
+ntfs-3g
+parted
+lsblk
+
+# File sharing
+samba4-server
+nfs-kernel-server
+
+# Docker / containers
+# Mattermost itself is deployed as containers on first boot.
+dockerd
+docker
+docker-compose
+kmod-veth
+iptables-nft
+kmod-nf-nat
+kmod-nf-conntrack
+kmod-nft-core
+
+# Hardware IO / sensors
+kmod-i2c-bcm2835
+kmod-i2c-dev
+i2c-tools
+kmod-gpio-button-hotplug
+watchdog
+
+# Monitoring / diagnostics
+htop
+iotop
+collectd
+collectd-mod-cpu
+collectd-mod-df
+collectd-mod-disk
+collectd-mod-interface
+collectd-mod-iwinfo
+collectd-mod-load
+collectd-mod-memory
+collectd-mod-network
+collectd-mod-thermal

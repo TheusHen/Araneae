@@ -1,0 +1,21 @@
+#!/bin/sh /etc/rc.common
+START=99
+STOP=10
+USE_PROCD=0
+
+start() {
+  /etc/araneae/scripts/start-mattermost.sh &
+}
+
+stop() {
+  if [ -d /srv/araneae/mattermost ]; then
+    cd /srv/araneae/mattermost || exit 0
+    docker compose down || docker-compose down || true
+  fi
+}
+
+restart() {
+  stop
+  sleep 2
+  start
+}

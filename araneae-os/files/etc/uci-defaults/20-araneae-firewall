@@ -1,0 +1,49 @@
+#!/bin/sh
+set -eu
+. /etc/araneae/araneae.env
+
+# VPN zone for WireGuard clients.
+uci set firewall.vpn='zone'
+uci set firewall.vpn.name='vpn'
+uci -q del_list firewall.vpn.network='wg0' || true
+uci add_list firewall.vpn.network='wg0'
+uci set firewall.vpn.input='ACCEPT'
+uci set firewall.vpn.output='ACCEPT'
+uci set firewall.vpn.forward='REJECT'
+uci set firewall.vpn.masq='0'
+uci set firewall.vpn.mtu_fix='1'
+
+# Permit WireGuard handshake from WAN.
+uci set firewall.araneae_allow_wg='rule'
+uci set firewall.araneae_allow_wg.name='Araneae Allow WireGuard from WAN'
+uci set firewall.araneae_allow_wg.src='wan'
+uci set firewall.araneae_allow_wg.proto='udp'
+uci set firewall.araneae_allow_wg.dest_port="$ARANAE_WG_PORT"
+uci set firewall.araneae_allow_wg.target='ACCEPT'
+
+# Mattermost is intended to be reachable only over wg0 / VPN.
+uci set firewall.araneae_allow_mm_vpn='rule'
+uci set firewall.araneae_allow_mm_vpn.name='Araneae Allow Mattermost from VPN'
+uci set firewall.araneae_allow_mm_vpn.src='vpn'
+uci set firewall.araneae_allow_mm_vpn.proto='tcp'
+uci set firewall.araneae_allow_mm_vpn.dest_port="$ARANAE_MATTERMOST_PORT"
+uci set firewall.araneae_allow_mm_vpn.target='ACCEPT'
+
+uci set firewall.araneae_reject_mm_wan='rule'
+uci set firewall.araneae_reject_mm_wan.name='Araneae Block Mattermost from WAN'
+uci set firewall.araneae_reject_mm_wan.src='wan'
+uci set firewall.araneae_reject_mm_wan.proto='tcp'
+uci set firewall.araneae_reject_mm_wan.dest_port="$ARANAE_MATTERMOST_PORT"
+uci set firewall.araneae_reject_mm_wan.target='REJECT'
+
+uci set firewall.araneae_reject_mm_lan='rule'
+uci set firewall.araneae_reject_mm_lan.name='Araneae Block Mattermost from LAN'
+uci set firewall.araneae_reject_mm_lan.src='lan'
+uci set firewall.araneae_reject_mm_lan.proto='tcp'
+uci set firewall.araneae_reject_mm_lan.dest_port="$ARANAE_MATTERMOST_PORT"
+uci set firewall.araneae_reject_mm_lan.target='REJECT'
+
+uci commit firewall
+/etc/init.d/firewall restart || true
+
+exit 0
