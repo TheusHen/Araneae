@@ -9,9 +9,10 @@ luci-app-opkg
 luci-app-firewall
 luci-app-statistics
 luci-app-samba4
-luci-app-wireguard
+luci-proto-wireguard
 
 # Network / routing / VPN
+-dnsmasq
 dnsmasq-full
 odhcpd-ipv6only
 odhcp6c
@@ -58,14 +59,11 @@ kmod-nft-core
 
 # Hardware IO / sensors
 kmod-i2c-bcm2835
-kmod-i2c-dev
 i2c-tools
 kmod-gpio-button-hotplug
-watchdog
 
 # Monitoring / diagnostics
 htop
-iotop
 collectd
 collectd-mod-cpu
 collectd-mod-df
